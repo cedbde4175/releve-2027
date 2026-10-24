@@ -1,0 +1,246 @@
+{
+ "rn-accueil": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "c0b846c32085bb70b98a889218a1b4a89890fa75bb0db2716f50093924c0e9e7",
+    "fichier": "rn-accueil/2026-10-24T1917Z.txt",
+    "caracteres": 48347,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "lfi-programme": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "e4014e4ba59710802469e949e36096bf235159239120ed7698d3bb9939fb799d",
+    "fichier": "lfi-programme/2026-10-24T1917Z.txt",
+    "caracteres": 5593,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "lfi-aec": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "9e2f3a8c44033de4a7f9a349af04d1bc7b05818997e8b8aa3a42e99b5de6c813",
+    "fichier": "lfi-aec/2026-10-24T1917Z.txt",
+    "caracteres": 6445,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "hor-manifeste": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "3a4907129db36015c6f431c77eeed9a412b38123c232010cff44180786d013cb",
+    "fichier": "hor-manifeste/2026-10-24T1917Z.txt",
+    "caracteres": 7156,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "hor-narco": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "9baf869d541cee274f967405910e62865845fe94dbaded10195d1231fc801314",
+    "fichier": "hor-narco/2026-10-24T1917Z.txt",
+    "caracteres": 12098,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "attal-programme": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "5538e01fc86c52e742e77040e9ef76c9118393e2a29bec9a4f1f0e8d94b36b3d",
+    "fichier": "attal-programme/2026-10-24T1917Z.txt",
+    "caracteres": 1710,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "attal-education": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "c144ce8017048442b23c91f534c68e61b704a46f2e8a2cb752491bd33a2f13af",
+    "fichier": "attal-education/2026-10-24T1917Z.txt",
+    "caracteres": 4365,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "attal-travail": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "5b6fd36c9d2869651515e58f3f8284d83332f119c34b590b8bff228e7e87db2d",
+    "fichier": "attal-travail/2026-10-24T1917Z.txt",
+    "caracteres": 7317,
+    "wayback": "https://web.archive.org/web/20261024192111/https://attalpresident.fr/programme/travail-salaires"
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "attal-frontieres": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "de6230f05566ab94d4db12e97d86ab5e63ffef433427879594a2c773e698dc6c",
+    "fichier": "attal-frontieres/2026-10-24T1917Z.txt",
+    "caracteres": 9133,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "attal-ia": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "01ab621aec3bf2e5e2c0e77db27d7f4465c61b5e2990f5ca01585c4b2e08aca7",
+    "fichier": "attal-ia/2026-10-24T1917Z.txt",
+    "caracteres": 5461,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "attal-dette": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "5b1f4a521039cb4a9a039c6b28192912f1f98afd5016fe3fa5d0fc9b249d40df",
+    "fichier": "attal-dette/2026-10-24T1917Z.txt",
+    "caracteres": 4872,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "attal-dette-eco": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "29fc8fa3d3b1e38505eb8b58f601ade72265b7c26307607b21e6ea7fa3a56eea",
+    "fichier": "attal-dette-eco/2026-10-24T1917Z.txt",
+    "caracteres": 10181,
+    "wayback": "https://web.archive.org/web/20261024192502/https://attalpresident.fr/programme/dette-ecologique"
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "lr-propositions": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "4ad0880e6047d0b58eff953aa649b8375fb676996ebe3b09daa5b5323438eb75",
+    "fichier": "lr-propositions/2026-10-24T1917Z.txt",
+    "caracteres": 11444,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "eco-projet": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "bd1ed99d3210d915d1e50cc38d955c8c42a308c38ea1c1760e92b6e17f5d5fc2",
+    "fichier": "eco-projet/2026-10-24T1917Z.txt",
+    "caracteres": 1736,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "pcf-programme": {
+  "versions": [],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "erreur",
+  "erreur": "HTTP Error 403: Forbidden"
+ },
+ "rec-programme": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "94ecd983f122dad768b4e4626efc2faaaf2cce9ed8a48d421f6195ec0c77b3f8",
+    "fichier": "rec-programme/2026-10-24T1917Z.txt",
+    "caracteres": 3982,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "pp-projet": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "8052ff77204e641fbe6ba86743159e9dbe6e334a60a3010ad1e2ee7f54632477",
+    "fichier": "pp-projet/2026-10-24T1917Z.txt",
+    "caracteres": 5473,
+    "wayback": "https://web.archive.org/web/20261024192720/https://place-publique.eu/pages/69jA2SKIG5udlNX7wI3dmc/le-projet"
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ },
+ "glucks-accueil": {
+  "versions": [
+   {
+    "date": "2026-10-24T19:17:53+00:00",
+    "empreinte": "fc7d1dc970560f3946d9915675736b579be7eacd0035b2be8bb56792b5e61ee8",
+    "fichier": "glucks-accueil/2026-10-24T1917Z.txt",
+    "caracteres": 2549,
+    "wayback": null
+   }
+  ],
+  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "statut": "ok",
+  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+ }
+}
