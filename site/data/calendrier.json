@@ -1,0 +1,86 @@
+{
+ "maj": "2026-10-24",
+ "statuts": {
+  "etablie": "Date passée, établie par la source",
+  "conseil_ministres": "Fixée en Conseil des ministres selon la presse ; décret à paraître",
+  "presse": "Date rapportée par la presse ; texte officiel non consulté",
+  "calculee": "Date calculée par Relevé à partir de la règle citée",
+  "a_paraitre": "Date non encore publiée"
+ },
+ "dates": [
+  {
+   "date": "2026-04-01",
+   "titre": "Début de la période de comptabilisation des dépenses et recettes de campagne",
+   "statut": "etablie",
+   "sources": [
+    "mdd-calendrier"
+   ]
+  },
+  {
+   "date": "2026-07-01",
+   "titre": "Présentation du calendrier électoral en Conseil des ministres",
+   "statut": "etablie",
+   "sources": [
+    "mdd-calendrier"
+   ]
+  },
+  {
+   "date": null,
+   "titre": "Décret de convocation des électeurs, puis ouverture du recueil des parrainages le lendemain",
+   "statut": "a_paraitre",
+   "sources": [
+    "mdd-calendrier"
+   ]
+  },
+  {
+   "date": "2027-03-12",
+   "heure": "18:00",
+   "titre": "Clôture du recueil des parrainages (500 signatures, au moins 30 départements ou collectivités)",
+   "statut": "presse",
+   "sources": [
+    "ps-decompte",
+    "tle-candidats"
+   ]
+  },
+  {
+   "date": null,
+   "titre": "Publication de la liste officielle des candidats par le Conseil constitutionnel",
+   "statut": "a_paraitre",
+   "sources": []
+  },
+  {
+   "date": "2027-04-17",
+   "titre": "Premier tour pour les électeurs votant le samedi (Guadeloupe, Martinique, Guyane, Saint-Pierre-et-Miquelon, Saint-Barthélemy, Saint-Martin, Polynésie française)",
+   "statut": "calculee",
+   "sources": [
+    "mdd-calendrier"
+   ]
+  },
+  {
+   "date": "2027-04-18",
+   "titre": "Premier tour de l'élection présidentielle",
+   "statut": "conseil_ministres",
+   "sources": [
+    "mdd-calendrier",
+    "lcp-dates"
+   ]
+  },
+  {
+   "date": "2027-05-01",
+   "titre": "Second tour pour les électeurs votant le samedi",
+   "statut": "calculee",
+   "sources": [
+    "mdd-calendrier"
+   ]
+  },
+  {
+   "date": "2027-05-02",
+   "titre": "Second tour de l'élection présidentielle",
+   "statut": "conseil_ministres",
+   "sources": [
+    "mdd-calendrier",
+    "lcp-dates"
+   ]
+  }
+ ]
+}

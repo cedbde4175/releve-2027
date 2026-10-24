@@ -1,0 +1,112 @@
+{
+ "pages": [
+  {
+   "id": "rn-accueil",
+   "candidat": "le-pen",
+   "url": "https://rassemblementnational.fr/",
+   "libelle": "Rassemblement national, page d'accueil"
+  },
+  {
+   "id": "lfi-programme",
+   "candidat": "melenchon",
+   "url": "https://melenchon2027.fr/programme/decouvrir/",
+   "libelle": "Mélenchon 2027, « Découvrir le programme »"
+  },
+  {
+   "id": "lfi-aec",
+   "candidat": "melenchon",
+   "url": "https://programme.lafranceinsoumise.fr/",
+   "libelle": "La France insoumise, site du programme"
+  },
+  {
+   "id": "hor-manifeste",
+   "candidat": "philippe",
+   "url": "https://horizonsleparti.fr/le-manifeste/",
+   "libelle": "Horizons, le manifeste"
+  },
+  {
+   "id": "hor-narco",
+   "candidat": "philippe",
+   "url": "https://horizonsleparti.fr/le-plan-dedouard-philippe-contre-le-narcotrafic/",
+   "libelle": "Horizons, plan contre le narcotrafic"
+  },
+  {
+   "id": "attal-programme",
+   "candidat": "attal",
+   "url": "https://attalpresident.fr/programme",
+   "libelle": "Attal Président, programme"
+  },
+  {
+   "id": "attal-education",
+   "candidat": "attal",
+   "url": "https://attalpresident.fr/programme/education",
+   "libelle": "Attal Président, éducation"
+  },
+  {
+   "id": "attal-travail",
+   "candidat": "attal",
+   "url": "https://attalpresident.fr/programme/travail-salaires",
+   "libelle": "Attal Président, travail et salaires"
+  },
+  {
+   "id": "attal-frontieres",
+   "candidat": "attal",
+   "url": "https://attalpresident.fr/programme/frontieres",
+   "libelle": "Attal Président, frontières"
+  },
+  {
+   "id": "attal-ia",
+   "candidat": "attal",
+   "url": "https://attalpresident.fr/programme/intelligence-artificielle",
+   "libelle": "Attal Président, intelligence artificielle"
+  },
+  {
+   "id": "attal-dette",
+   "candidat": "attal",
+   "url": "https://attalpresident.fr/programme/dette-de-letat",
+   "libelle": "Attal Président, dette de l'État"
+  },
+  {
+   "id": "attal-dette-eco",
+   "candidat": "attal",
+   "url": "https://attalpresident.fr/programme/dette-ecologique",
+   "libelle": "Attal Président, dette écologique"
+  },
+  {
+   "id": "lr-propositions",
+   "candidat": "retailleau",
+   "url": "https://republicains.fr/nos-propositions/",
+   "libelle": "Les Républicains, nos propositions"
+  },
+  {
+   "id": "eco-projet",
+   "candidat": "tondelier",
+   "url": "https://lesecologistes.fr/share/page/6ImK65GKUnvibm33WGkjkj/projet",
+   "libelle": "Les Écologistes, projet 2027"
+  },
+  {
+   "id": "pcf-programme",
+   "candidat": "roussel",
+   "url": "https://www.pcf.fr/le_programme",
+   "libelle": "PCF, le programme"
+  },
+  {
+   "id": "rec-programme",
+   "candidat": "zemmour",
+   "url": "https://leprogrammepourlafrance.fr/",
+   "libelle": "Reconquête, « Le Programme pour la France »"
+  },
+  {
+   "id": "pp-projet",
+   "candidat": "glucksmann",
+   "url": "https://place-publique.eu/pages/69jA2SKIG5udlNX7wI3dmc/le-projet",
+   "libelle": "Place publique, le projet"
+  },
+  {
+   "id": "glucks-accueil",
+   "candidat": "glucksmann",
+   "url": "https://glucks2027.fr/",
+   "libelle": "Glucksmann 2027, page d'accueil"
+  }
+ ]
+}

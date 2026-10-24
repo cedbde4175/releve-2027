@@ -1,0 +1,22 @@
+name: Signaler une erreur
+description: Une information fausse, incomplète, mal sourcée ou une page à suivre.
+labels: [signalement]
+body:
+  - type: input
+    id: element
+    attributes:
+      label: Élément concerné
+      description: Fiche, événement, date ou page (copiez le lien si possible).
+    validations:
+      required: true
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Ce qui est inexact ou manquant
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source qui l'établit
+      description: Lien vers une source, primaire de préférence.

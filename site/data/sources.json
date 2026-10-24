@@ -1,0 +1,86 @@
+{
+  "maj": "2026-10-24",
+  "sources": [
+    {
+      "id": "tle-candidats",
+      "editeur": "Toute l'Europe",
+      "type": "presse",
+      "titre": "Présidentielle 2027 : qui sont les candidats déjà déclarés ?",
+      "url": "https://www.touteleurope.eu/vie-politique-des-etats-membres/presidentielle-2027-qui-sont-les-candidats-deja-declares/",
+      "date_publication": "2026-10-14",
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "ps-decompte",
+      "editeur": "Public Sénat",
+      "type": "presse",
+      "titre": "Présidentielle 2027 : le dernier décompte des candidats déjà sur la ligne de départ",
+      "url": "https://www.publicsenat.fr/actualites/politique/presidentielle-2027-le-dernier-decompte-des-candidats-deja-sur-la-ligne-de-depart",
+      "date_publication": "2026-09-18",
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "ps-candidats",
+      "editeur": "Public Sénat",
+      "type": "presse",
+      "titre": "Élection présidentielle 2027 : qui sont les candidats déclarés (ou presque) ?",
+      "url": "https://www.publicsenat.fr/actualites/politique/election-presidentielle-2027-qui-sont-les-candidats-declares-ou-presque",
+      "date_publication": "2026-10-14",
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "lcp-primaire",
+      "editeur": "LCP",
+      "type": "presse",
+      "titre": "Primaire socialiste : vainqueur dès le 1er tour, Raphaël Glucksmann sera le candidat de la gauche sociale-démocrate",
+      "url": "https://lcp.fr/actualites/primaire-socialiste-vainqueur-des-le-1er-tour-raphael-glucksmann-sera-le-candidat-de-la",
+      "date_publication": "2026-10-11",
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "cdj-lepen",
+      "editeur": "Le Club des juristes",
+      "type": "presse",
+      "titre": "Affaire des assistants parlementaires du FN : coup d'arrêt à la candidature de Marine Le Pen ?",
+      "url": "https://www.leclubdesjuristes.com/justice/affaire-des-assistants-parlementaires-du-fn-coup-darret-a-la-candidature-de-marine-le-pen-16827/",
+      "date_publication": "2026-07-07",
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "repere-candidats",
+      "editeur": "Repère 2027",
+      "type": "commentaire",
+      "titre": "Candidats",
+      "url": "https://repere2027.fr/candidats/",
+      "date_publication": "2026-10-21",
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "fv-calendrier",
+      "editeur": "France-Vote",
+      "type": "commentaire",
+      "titre": "Calendrier",
+      "url": "https://www.france-vote.fr/calendrier",
+      "date_publication": null,
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "lcp-dates",
+      "editeur": "LCP",
+      "type": "presse",
+      "titre": "Présidentielle 2027 : les dates du premier et du second tour fixées",
+      "url": "https://lcp.fr/actualites/presidentielle-2027-les-dates-du-premier-et-du-second-tour-fixees-438582",
+      "date_publication": "2026-06-30",
+      "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "mdd-calendrier",
+      "editeur": "Le Monde du Droit",
+      "type": "presse",
+      "titre": "Présidentielle 2027 : calendrier électoral",
+      "url": "https://www.lemondedudroit.fr/public/282-droit-public-general/104968-presidentielle-2027-calendrier-electoral.html",
+      "date_publication": "2026-07-03",
+      "date_consultation": "2026-10-24"
+    }
+  ]
+}

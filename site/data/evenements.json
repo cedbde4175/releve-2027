@@ -1,0 +1,192 @@
+{
+ "maj": "2026-10-24",
+ "evenements": [
+  {
+   "id": "2024-09-philippe",
+   "date": "2024-09",
+   "precision": "mois",
+   "type": "candidature",
+   "candidats": [
+    "philippe"
+   ],
+   "titre": "Édouard Philippe annonce sa candidature",
+   "detail": null,
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-03-31-lisnard",
+   "date": "2026-03-31",
+   "precision": "jour",
+   "type": "candidature",
+   "candidats": [
+    "lisnard"
+   ],
+   "titre": "David Lisnard quitte Les Républicains et se déclare candidat",
+   "detail": "Il porte les couleurs de son mouvement, Nouvelle Énergie.",
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-04-19-retailleau",
+   "date": "2026-04-19",
+   "precision": "jour",
+   "type": "investiture",
+   "candidats": [
+    "retailleau"
+   ],
+   "titre": "Bruno Retailleau désigné candidat par les adhérents des Républicains",
+   "detail": "73,8 % selon Public Sénat.",
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-05-03-melenchon",
+   "date": "2026-05-03",
+   "precision": "jour",
+   "type": "candidature",
+   "candidats": [
+    "melenchon"
+   ],
+   "titre": "Jean-Luc Mélenchon annonce sa candidature",
+   "detail": "Quatrième candidature selon Public Sénat.",
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-05-22-attal",
+   "date": "2026-05-22",
+   "precision": "jour",
+   "type": "candidature",
+   "candidats": [
+    "attal"
+   ],
+   "titre": "Gabriel Attal officialise sa candidature",
+   "detail": null,
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-07-01-calendrier",
+   "date": "2026-07-01",
+   "precision": "jour",
+   "type": "calendrier",
+   "candidats": [],
+   "titre": "Le calendrier de l'élection est présenté en Conseil des ministres : 18 avril et 2 mai 2027",
+   "detail": null,
+   "sources": [
+    "mdd-calendrier",
+    "lcp-dates"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-07-07-lepen",
+   "date": "2026-07-07",
+   "precision": "jour",
+   "type": "candidature",
+   "candidats": [
+    "le-pen"
+   ],
+   "titre": "Marine Le Pen annonce sa candidature après la décision de la cour d'appel",
+   "detail": "Pourvoi en cassation formé : la condamnation n'est pas définitive.",
+   "sources": [
+    "tle-candidats",
+    "cdj-lepen"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-08-27-bertrand",
+   "date": "2026-08-27",
+   "precision": "jour",
+   "type": "intention",
+   "candidats": [
+    "bertrand"
+   ],
+   "titre": "Xavier Bertrand confirme son intention d'être candidat",
+   "detail": "Sans déclaration officielle à cette date, et alors que Les Républicains ont désigné Bruno Retailleau.",
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-09-06-roussel",
+   "date": "2026-09-06",
+   "precision": "jour",
+   "type": "investiture",
+   "candidats": [
+    "roussel"
+   ],
+   "titre": "La candidature de Fabien Roussel est validée par les adhérents du PCF",
+   "detail": "72 % selon Public Sénat.",
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-09-17-zemmour",
+   "date": "2026-09-17",
+   "precision": "jour",
+   "type": "intention",
+   "candidats": [
+    "zemmour"
+   ],
+   "titre": "Éric Zemmour annonce qu'il sera candidat",
+   "detail": "Déclaration formelle attendue à l'automne selon Toute l'Europe.",
+   "sources": [
+    "tle-candidats",
+    "ps-decompte"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-10-11-glucksmann",
+   "date": "2026-10-11",
+   "precision": "jour",
+   "type": "investiture",
+   "candidats": [
+    "glucksmann"
+   ],
+   "titre": "Raphaël Glucksmann remporte la primaire « Choisir 2027 » dès le premier tour",
+   "detail": "66,17 % des suffrages exprimés selon la proclamation citée par LCP (66,13 % selon Toute l'Europe).",
+   "sources": [
+    "lcp-primaire",
+    "tle-candidats"
+   ],
+   "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-10-14-polony",
+   "date": "2026-10-14",
+   "precision": "jour",
+   "type": "intention",
+   "candidats": [],
+   "titre": "Natacha Polony annonce sur France Inter qu'elle sera candidate",
+   "detail": "Une seule source consultée : pas encore de fiche (règle des deux médias).",
+   "sources": [
+    "tle-candidats"
+   ],
+   "ajoute_le": "2026-10-24"
+  }
+ ]
+}

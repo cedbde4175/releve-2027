@@ -1,0 +1,17 @@
+{
+  "name": "Relevé · Présidentielle 2027",
+  "short_name": "Relevé",
+  "description": "Ce qui a changé dans la campagne présidentielle 2027, avec la source.",
+  "lang": "fr",
+  "start_url": "./#/releve",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f5f1",
+  "theme_color": "#f6f5f1",
+  "icons": [
+    { "src": "icons/icone-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icone-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icone.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

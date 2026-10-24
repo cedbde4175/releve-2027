@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Relevé · Présidentielle 2027</title>
+  <meta name="description" content="Ce qui a changé dans la campagne présidentielle 2027, avec la source. Sans compte, sans publicité, sans traceur.">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161615" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icone.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icone-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Relevé">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="evitement" href="#contenu">Aller au contenu</a>
+  <header class="entete">
+    <a class="marque" href="#/releve" aria-label="Relevé, accueil">
+      <span class="marque-signe" aria-hidden="true">R</span>
+      <span>Relevé <span class="marque-sous">Présidentielle 2027</span></span>
+    </a>
+    <button class="installer" id="installer" hidden>Installer</button>
+  </header>
+
+  <nav class="onglets" aria-label="Sections">
+    <a href="#/releve" data-onglet="releve">Relevé</a>
+    <a href="#/candidats" data-onglet="candidats">Candidats</a>
+    <a href="#/calendrier" data-onglet="calendrier">Calendrier</a>
+    <a href="#/veille" data-onglet="veille">Veille</a>
+    <a href="#/methode" data-onglet="methode">Méthode</a>
+  </nav>
+
+  <main id="contenu" tabindex="-1">
+    <p class="chargement">Chargement…</p>
+  </main>
+
+  <footer class="pied">
+    <p>Relevé ne classe pas les candidats et n'affiche pas de sondages. Vos suivis restent sur cet appareil.</p>
+    <p><a href="#/suivis">Mes suivis et mes données</a> · <a href="#/methode">Méthode et corrections</a> · <a href="https://github.com/cedbde4175/releve-2027">Code et données ouvertes</a></p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
