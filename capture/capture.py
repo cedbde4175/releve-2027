@@ -18,6 +18,7 @@ import hashlib
 import json
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 import urllib.robotparser
@@ -39,6 +40,8 @@ TEXTE_MIN = 200
 EXTRAITS_MAX = 8
 LONGUEUR_EXTRAIT = 280
 CHANGEMENTS_MAX = 300
+RELANCES_WAYBACK = 6
+PAUSE_WAYBACK = 8
 
 IGNORER = {"script", "style", "noscript", "svg", "template", "iframe", "head"}
 BLOCS = {
@@ -114,6 +117,7 @@ def telecharger(url):
 
 def demander_wayback(url):
     """Demande une copie à Internet Archive. Au mieux : un échec n'arrête rien."""
+    time.sleep(PAUSE_WAYBACK)
     try:
         req = urllib.request.Request("https://web.archive.org/save/" + url, headers={"User-Agent": AGENT})
         with urllib.request.urlopen(req, timeout=90) as r:
@@ -168,6 +172,7 @@ def main():
     t = maintenant()
     horodatage = t.strftime("%Y-%m-%dT%H%MZ")
     nouveaux = []
+    relances = 0
 
     for page in pages:
         pid, url = page["id"], page["url"]
@@ -195,6 +200,10 @@ def main():
         empreinte = hashlib.sha256(texte.encode("utf-8")).hexdigest()
         precedente = e["versions"][-1] if e["versions"] else None
         if precedente and precedente["empreinte"] == empreinte:
+            # Internet Archive limite les demandes anonymes : on retente les copies manquantes, quelques-unes par jour.
+            if not precedente.get("wayback") and relances < RELANCES_WAYBACK:
+                relances += 1
+                precedente["wayback"] = demander_wayback(url)
             print("  inchangée")
             continue
 
