@@ -8,6 +8,7 @@
   <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#161615" media="(prefers-color-scheme: dark)">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="alternate" type="application/atom+xml" title="Relevé, flux du relevé" href="flux.xml">
   <link rel="icon" href="icons/icone.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/icone-180.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,6 +28,8 @@
   <nav class="onglets" aria-label="Sections">
     <a href="#/releve" data-onglet="releve">Relevé</a>
     <a href="#/candidats" data-onglet="candidats">Candidats</a>
+    <a href="#/themes" data-onglet="themes">Thèmes</a>
+    <a href="#/chercher" data-onglet="chercher">Chercher</a>
     <a href="#/calendrier" data-onglet="calendrier">Calendrier</a>
     <a href="#/veille" data-onglet="veille">Veille</a>
     <a href="#/methode" data-onglet="methode">Méthode</a>
@@ -38,7 +41,7 @@
 
   <footer class="pied">
     <p>Relevé ne classe pas les candidats et n'affiche pas de sondages. Vos suivis restent sur cet appareil.</p>
-    <p><a href="#/suivis">Mes suivis et mes données</a> · <a href="#/methode">Méthode et corrections</a> · <a href="https://github.com/cedbde4175/releve-2027">Code et données ouvertes</a></p>
+    <p><a href="#/suivis">Mes suivis et mes données</a> · <a href="#/methode">Méthode</a> · <a href="#/donnees">Données ouvertes et corrections</a> · <a href="flux.xml">Flux RSS</a> · <a href="https://github.com/cedbde4175/releve-2027">Code et données ouvertes</a></p>
   </footer>
 
   <script type="module" src="app.js"></script>

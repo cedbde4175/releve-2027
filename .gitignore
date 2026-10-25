@@ -1,2 +1,6 @@
 __pycache__/
 capture/rapport.md
+site/data/derive.json
+site/data/journal.json
+site/flux.xml
+site/flux/

@@ -20,6 +20,8 @@ import gzip
 import hashlib
 import json
 import re
+import shutil
+import subprocess
 import sys
 import time
 import urllib.error
@@ -124,7 +126,21 @@ def telecharger(url):
         if r.headers.get("Content-Encoding", "").lower() == "gzip" or brut[:2] == b"\x1f\x8b":
             brut = gzip.decompress(brut)
         jeu = r.headers.get_content_charset() or "utf-8"
-        return brut.decode(jeu, "replace"), r.headers.get_content_type()
+        type_ = r.headers.get_content_type()
+        if type_ == "application/pdf" or brut[:5] == b"%PDF-":
+            return texte_pdf(brut), "application/pdf"
+        return brut.decode(jeu, "replace"), type_
+
+
+def texte_pdf(brut):
+    """Texte d'un PDF (programme publié en PDF) avec pdftotext, s'il est installé."""
+    if not shutil.which("pdftotext"):
+        raise RuntimeError("pdftotext absent : PDF non lu")
+    r = subprocess.run(["pdftotext", "-layout", "-enc", "UTF-8", "-", "-"], input=brut, capture_output=True,
+                       check=True)
+    # Une ligne par paragraphe : on recolle les lignes coupées par la mise en page.
+    paragraphes = re.split(r"\n\s*\n", r.stdout.decode("utf-8", "replace"))
+    return "\n".join(re.sub(r"\s+", " ", p).strip() for p in paragraphes if p.strip())
 
 
 def demander_wayback(url):
@@ -240,21 +256,32 @@ def main():
             continue
         try:
             html, type_ = telecharger(url)
+        except urllib.error.HTTPError as ex:
+            # Page supprimée : on le note avec la date, l'archive reste consultable.
+            if ex.code in (404, 410):
+                e["statut"] = "retiree"
+                e.setdefault("retiree_le", t.isoformat())
+            else:
+                e["statut"] = "erreur"
+                e["erreur"] = str(ex)[:200]
+            print(f"  erreur : {ex}")
+            continue
         except Exception as ex:
             e["statut"] = "erreur"
             e["erreur"] = str(ex)[:200]
             print(f"  erreur : {ex}")
             continue
-        if "html" not in type_:
+        if "html" not in type_ and type_ != "application/pdf":
             e["statut"] = "format_non_suivi"
             continue
-        texte = extraire_texte(html)
+        texte = html if type_ == "application/pdf" else extraire_texte(html)
         if texte.count("\ufffd") > 20:
             # Contenu binaire ou mal décodé : on n'archive pas du bruit.
             e["statut"] = "illisible"
             print("  texte illisible")
             continue
         e.pop("erreur", None)
+        e.pop("retiree_le", None)
         e["statut"] = "ok" if len(texte) >= TEXTE_MIN else "texte_insuffisant"
         e["derniere_reussite"] = t.isoformat()
         empreinte = hashlib.sha256(texte.encode("utf-8")).hexdigest()
@@ -279,7 +306,7 @@ def main():
             diff = comparer(avant, texte)
             if diff["lignes_ajoutees"] or diff["lignes_retirees"]:
                 ch = {"id": f"{pid}-{horodatage}", "date": t.isoformat(), "page": pid,
-                      "candidat": page["candidat"], "url": url, "libelle": page["libelle"],
+                      "candidat": page.get("candidat"), "url": url, "libelle": page["libelle"],
                       "wayback_avant": precedente.get("wayback"), "wayback_apres": version["wayback"],
                       "releve": False, **diff}
                 changements.append(ch)
@@ -289,7 +316,7 @@ def main():
                         citation, tronquee = citer(ligne)
                         publies.append({
                             "id": f"{pid}-{horodatage}-{n}", "date": t.isoformat(), "sens": sens,
-                            "page": pid, "candidat": page["candidat"], "url": url, "libelle": page["libelle"],
+                            "page": pid, "candidat": page.get("candidat"), "url": url, "libelle": page["libelle"],
                             "citation": citation, "tronquee": tronquee,
                             "archive_avant": ARCHIVE_WEB + precedente["fichier"],
                             "archive_apres": ARCHIVE_WEB + fichier,
@@ -311,6 +338,7 @@ def main():
                        "premiere_capture": versions[0]["date"] if versions else None,
                        "derniere_version": versions[-1]["date"] if versions else None,
                        "nombre_versions": len(versions),
+                       "retiree_le": e.get("retiree_le"),
                        "wayback": next((v["wayback"] for v in reversed(versions) if v.get("wayback")), None)})
     ecrire_json(VEILLE, {"maj": t.isoformat(), "pages": resume,
                          "changements": changements[-CHANGEMENTS_MAX:]})

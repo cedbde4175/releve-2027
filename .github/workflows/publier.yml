@@ -26,13 +26,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Installer la lecture des PDF
+        run: sudo apt-get install -y --no-install-recommends poppler-utils
       - name: Capturer les pages suivies
         run: python capture/capture.py
+      - name: Fonctions (Wikidata) et vérifications publiées (Google Fact Check, si une clé est fournie)
+        continue-on-error: true
+        env:
+          FACTCHECK_API_KEY: ${{ secrets.FACTCHECK_API_KEY }}
+        run: python capture/enrichir.py
       - name: Enregistrer les captures
         run: |
           git config user.name "releve-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add archive site/data/veille.json site/data/auto.json
+          git add archive site/data/veille.json site/data/auto.json site/data/fonctions.json
+          git add site/data/factchecks.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "Aucune nouvelle capture."
           else
@@ -51,6 +59,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          # L'historique complet sert au journal public des modifications.
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Thèmes, remplacements, journal et flux Atom
+        run: python capture/deriver.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
