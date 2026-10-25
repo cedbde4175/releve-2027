@@ -1,5 +1,5 @@
 // Coquille en cache pour l'usage hors ligne ; données toujours demandées au réseau d'abord.
-const VERSION = "releve-v1";
+const VERSION = "releve-v2";
 const COQUILLE = ["./", "index.html", "styles.css", "app.js", "manifest.webmanifest", "icons/icone.svg", "icons/icone-192.png"];
 
 self.addEventListener("install", (ev) => {

@@ -163,3 +163,38 @@ th { color: var(--encre-douce); font-weight: 600; }
 .carte-auto { border-style: dashed; }
 blockquote.barre { text-decoration: line-through; text-decoration-color: var(--trait-fort); color: var(--encre-douce); }
 .auto-mention { font-size: 0.78rem; color: var(--encre-douce); margin: 6px 0 0; }
+
+/* Relevé : filtres, lecture, avant/après, thèmes, recherche */
+.filtres { margin: 8px 0 16px; }
+.filtres summary, .avant-apres summary, .dates-sources summary, .bloc-theme summary { cursor: pointer; color: var(--encre-douce); font-size: 0.9rem; }
+.filtres .puces { margin: 10px 0 4px; }
+.carte-actions { margin: 8px 0 0; text-align: right; }
+.lien-bouton { font: inherit; font-size: 0.85rem; background: none; border: 0; padding: 4px 0; color: var(--encre-douce); text-decoration: underline; cursor: pointer; min-height: 32px; }
+.actions-releve { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 16px 0 0; }
+.suite { color: var(--encre-douce); }
+.diff-mots { font-family: var(--police-titre); font-size: 1.05rem; margin: 0.5rem 0; overflow-wrap: anywhere; }
+.diff-mots del { background: var(--retrait); text-decoration-color: var(--encre-douce); }
+.diff-mots ins { background: var(--ajout); text-decoration: underline; text-underline-offset: 3px; }
+.avant-apres { margin: 6px 0; }
+.dates-sources { margin: 2px 0 0; font-size: 0.85rem; }
+.dates-sources ul { margin: 6px 0; padding-left: 18px; color: var(--encre-douce); }
+.themes-candidat { padding-left: 18px; }
+.bloc-theme { margin: 12px 0; }
+.bloc-theme h3 { margin: 0 0 6px; }
+.phrases { list-style: none; padding: 0; margin: 0; }
+.phrases li { margin: 0 0 10px; }
+.phrases .source-meta { margin: 0; }
+.frise-compacte li { padding-bottom: 8px; }
+.verifs { padding-left: 18px; }
+.verifs li { margin-bottom: 8px; }
+.recherche { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.recherche input, .recherche select { font: inherit; min-height: 40px; border: 1px solid var(--trait-fort); border-radius: var(--rayon); background: var(--surface); color: var(--encre); padding: 6px 10px; }
+.recherche input { flex: 1 1 240px; min-width: 0; }
+.recherche select { flex: 0 1 220px; max-width: 100%; }
+.resultats { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--trait); }
+.resultats li { padding: 12px 0; border-bottom: 1px solid var(--trait); overflow-wrap: anywhere; }
+.resultats .detail { margin: 4px 0 0; color: var(--encre-douce); font-size: 0.92rem; }
+mark { background: var(--incertain-fond); color: var(--incertain-encre); border-radius: 2px; }
+.journal { padding-left: 18px; }
+.journal li { margin-bottom: 8px; }
+.journal time { display: block; font-size: 0.85rem; color: var(--encre-douce); }

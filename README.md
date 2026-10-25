@@ -11,6 +11,9 @@ Site : https://cedbde4175.github.io/releve-2027/
 - Chaque jour, GitHub Actions capture le texte des pages officielles suivies, archive toute nouvelle version (`archive/`) et demande une copie à Internet Archive.
 - Sur les pages marquées `"auto": true` dans `capture/pages.json` (pages de programme), les phrases de contenu ajoutées ou retirées sont publiées sans relecture dans `site/data/auto.json` : citations exactes, jamais reformulées, avec le texte archivé avant et après. Menus, boutons, lignes communes au site et simples déplacements sont filtrés.
 - Les pages d'accueil et agendas (`"auto": false`) restent dans la veille brute, sans carte dans le relevé.
+- À chaque publication, `capture/deriver.py` calcule sans IA : les phrases actuelles des pages de programme classées par thème (mots-clés publics), les paires « phrase retirée / phrase ajoutée » présentées en avant/après, le journal des modifications (lu dans Git) et les flux Atom (`flux.xml`, `flux/<candidat>.xml`).
+- Chaque jour, `capture/enrichir.py` lit les fonctions des candidats dans Wikidata et, si le secret `FACTCHECK_API_KEY` existe, les vérifications publiées au format ClaimReview (Google Fact Check Tools, clé gratuite).
+- Les pages en PDF sont lues avec `pdftotext` ; une page supprimée (404, 410) est marquée « retirée » avec sa date.
 - Aucun texte n'est rédigé ou résumé automatiquement. Les statuts de candidature (`candidats.json`, `evenements.json`) restent mis à jour à la main.
 
 ## Arborescence
@@ -24,7 +27,10 @@ Site : https://cedbde4175.github.io/releve-2027/
 | `site/data/sources.json` | Sources citées (éditeur, type, dates de publication et de consultation). |
 | `site/data/veille.json` | Généré par la capture : état des pages et différences brutes. |
 | `site/data/auto.json` | Généré par la capture : passages ajoutés ou retirés, publiés automatiquement. |
-| `capture/pages.json` | Liste des pages officielles suivies. |
+| `site/data/fonctions.json` | Généré : fonctions occupées (Wikidata). Forcer un identifiant : champ `"wikidata": "Q…"` (ou `false`) dans `candidats.json`. |
+| `site/data/factchecks.json` | Généré si une clé est fournie : vérifications publiées mentionnant chaque candidat. |
+| `site/data/derive.json`, `site/data/journal.json`, `site/flux*` | Générés à la publication (non versionnés) par `capture/deriver.py`. |
+| `capture/pages.json` | Liste des pages officielles suivies (`"institution": true` pour les pages officielles sans candidat). |
 | `capture/capture.py` | Script de capture (bibliothèque standard Python). |
 | `archive/` | Textes capturés, une version par changement. |
 
@@ -54,6 +60,8 @@ Toute source citée doit exister dans `site/data/sources.json`. Un push sur `mai
 ```sh
 python3 -m http.server -d site 8000
 python3 capture/capture.py   # capture manuelle
+python3 capture/enrichir.py  # fonctions Wikidata (et vérifications si FACTCHECK_API_KEY)
+python3 capture/deriver.py   # thèmes, avant/après, journal, flux
 ```
 
 ## Licence

@@ -125,6 +125,30 @@
    "url": "https://glucks2027.fr/",
    "libelle": "Glucksmann 2027, page d'accueil",
    "auto": false
+  },
+  {
+   "id": "cc-accueil",
+   "candidat": null,
+   "url": "https://www.conseil-constitutionnel.fr/",
+   "libelle": "Conseil constitutionnel, page d'accueil (parrainages, liste officielle)",
+   "auto": false,
+   "institution": true
+  },
+  {
+   "id": "infogouv-presidentielle",
+   "candidat": null,
+   "url": "https://www.info.gouv.fr/actualite/election-presidentielle-2027",
+   "libelle": "info.gouv.fr, élection présidentielle 2027",
+   "auto": false,
+   "institution": true
+  },
+  {
+   "id": "sp-presidentielle",
+   "candidat": null,
+   "url": "https://www.service-public.gouv.fr/particuliers/actualites/A15053?lang=fr",
+   "libelle": "Service-public.fr, élection présidentielle 2027",
+   "auto": false,
+   "institution": true
   }
  ]
 }
