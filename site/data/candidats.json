@@ -92,7 +92,8 @@
    "pages_suivies": [
     "hor-manifeste",
     "hor-narco"
-   ]
+   ],
+   "wikidata": "Q3579995"
   },
   {
    "id": "attal",
@@ -251,7 +252,8 @@
     ]
    },
    "note": "Les Républicains ont désigné un autre candidat (Bruno Retailleau). Aucune page officielle de programme vérifiée à ce jour : pas de capture.",
-   "pages_suivies": []
+   "pages_suivies": [],
+   "wikidata": "Q203793"
   },
   {
    "id": "ruffin",
