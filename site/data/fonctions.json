@@ -1,0 +1,726 @@
+{
+ "maj": "2026-10-25T09:49:24+00:00",
+ "candidats": {
+  "le-pen": {
+   "wikidata": "Q12927",
+   "fonctions": [
+    {
+     "poste": "Q3044918",
+     "debut": "2024-07-01",
+     "fin": null,
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2022-06-22",
+     "fin": "2024-06-09",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q63758845",
+     "debut": "2021-07-01",
+     "fin": "2025-04",
+     "intitule": "conseiller départemental du Pas-de-Calais"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2017-06-21",
+     "fin": "2022-06-21",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q62274430",
+     "debut": "2016-01-01",
+     "fin": "2021-07-02",
+     "intitule": "conseiller régional des Hauts-de-France"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2014-07-01",
+     "fin": "2017-06-18",
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q1553195",
+     "debut": "2011-01-16",
+     "fin": "2021-12-13",
+     "intitule": "dirigeant de parti politique"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2009-07-14",
+     "fin": "2014-06-30",
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2004-07-20",
+     "fin": "2009-07-13",
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q59239951",
+     "debut": "2004-03-28",
+     "fin": "2010-03-21",
+     "intitule": "conseiller régional d'Île-de-France"
+    }
+   ]
+  },
+  "glucksmann": {
+   "wikidata": "Q556149",
+   "fonctions": [
+    {
+     "poste": "Q27169",
+     "debut": "2024-07-16",
+     "fin": null,
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2019-07-02",
+     "fin": "2024-07-15",
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q2994387",
+     "debut": "2005",
+     "fin": null,
+     "intitule": "conseiller ou conseillère"
+    }
+   ]
+  },
+  "melenchon": {
+   "wikidata": "Q5829",
+   "fonctions": [
+    {
+     "poste": "Q3044918",
+     "debut": "2017-06-21",
+     "fin": "2022-06-21",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2014-07-01",
+     "fin": "2017-06-18",
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2009-07-14",
+     "fin": "2014-07-01",
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q14828018",
+     "debut": "2004-09-26",
+     "fin": "2010-01-07",
+     "intitule": "sénateur ou sénatrice de la Cinquième République"
+    },
+    {
+     "poste": "Q814694",
+     "debut": "2000-03-27",
+     "fin": "2002-05-06",
+     "intitule": "ministre délégué"
+    },
+    {
+     "poste": "Q3780304",
+     "debut": "1998-03-23",
+     "fin": "2004-04-02",
+     "intitule": "conseiller général"
+    },
+    {
+     "poste": "Q14828018",
+     "debut": "1995-09-24",
+     "fin": "2000-04-27",
+     "intitule": "sénateur ou sénatrice de la Cinquième République"
+    },
+    {
+     "poste": "Q14828018",
+     "debut": "1986-09-28",
+     "fin": "1995",
+     "intitule": "sénateur ou sénatrice de la Cinquième République"
+    },
+    {
+     "poste": "Q3780304",
+     "debut": "1985-03-23",
+     "fin": "1992-04-02",
+     "intitule": "conseiller général"
+    }
+   ]
+  },
+  "philippe": {
+   "wikidata": null,
+   "fonctions": []
+  },
+  "attal": {
+   "wikidata": "Q30339350",
+   "fonctions": [
+    {
+     "poste": "Q3044918",
+     "debut": "2024-07-08",
+     "fin": null,
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q1587677",
+     "debut": "2024-01-09",
+     "fin": "2024-09-05",
+     "intitule": "Premier ministre français"
+    },
+    {
+     "poste": "Q16059954",
+     "debut": "2023-07-20",
+     "fin": "2024-01-09",
+     "intitule": "ministre de l'Éducation nationale"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2022-06-22",
+     "fin": "2022-07-22",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q107659488",
+     "debut": "2022-05-20",
+     "fin": "2023-07-20",
+     "intitule": "ministre délégué chargé des Comptes publics"
+    },
+    {
+     "poste": "Q65146859",
+     "debut": "2020-07-06",
+     "fin": "2022-05-20",
+     "intitule": "porte-parole du gouvernement"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2017-06-21",
+     "fin": "2018-11-16",
+     "intitule": "député français"
+    }
+   ]
+  },
+  "retailleau": {
+   "wikidata": "Q2926942",
+   "fonctions": [
+    {
+     "poste": "Q20203006",
+     "debut": "2024-09-21",
+     "fin": "2025-10-12",
+     "intitule": "ministre de l'Intérieur"
+    },
+    {
+     "poste": "Q1255921",
+     "debut": "2017-11",
+     "fin": null,
+     "intitule": "président ou présidente"
+    },
+    {
+     "poste": "Q63155011",
+     "debut": "2015-12-18",
+     "fin": "2017-09-30",
+     "intitule": "président du conseil régional des Pays de la Loire"
+    },
+    {
+     "poste": "Q61291513",
+     "debut": "2015-12-13",
+     "fin": null,
+     "intitule": "conseiller régional des Pays de la Loire"
+    },
+    {
+     "poste": "Q30461",
+     "debut": "2015-05",
+     "fin": null,
+     "intitule": "président ou présidente"
+    },
+    {
+     "poste": "Q30461",
+     "debut": "2014-10-02",
+     "fin": "2015-05",
+     "intitule": "président ou présidente"
+    },
+    {
+     "poste": "Q14828018",
+     "debut": "2014-09-28",
+     "fin": null,
+     "intitule": "sénateur ou sénatrice de la Cinquième République"
+    },
+    {
+     "poste": "Q1872450",
+     "debut": "2010-11-30",
+     "fin": "2015-04-02",
+     "intitule": "président ou présidente de conseil général"
+    },
+    {
+     "poste": "Q14828018",
+     "debut": "2004-09-26",
+     "fin": "2014-09-28",
+     "intitule": "sénateur ou sénatrice de la Cinquième République"
+    },
+    {
+     "poste": "Q61291513",
+     "debut": "1998",
+     "fin": "2004",
+     "intitule": "conseiller régional des Pays de la Loire"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "1994-11-27",
+     "fin": "1997-04-21",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3780304",
+     "debut": "1988",
+     "fin": "2015",
+     "intitule": "conseiller général"
+    }
+   ]
+  },
+  "tondelier": {
+   "wikidata": "Q29917987",
+   "fonctions": [
+    {
+     "poste": "Q3477315",
+     "debut": "2022-12-10",
+     "fin": null,
+     "intitule": "secrétaire national des Écologistes"
+    },
+    {
+     "poste": "Q62274430",
+     "debut": "2021-07-02",
+     "fin": null,
+     "intitule": "conseiller régional des Hauts-de-France"
+    }
+   ]
+  },
+  "roussel": {
+   "wikidata": "Q30388733",
+   "fonctions": [
+    {
+     "poste": "Q62584380",
+     "debut": "2026-03-22",
+     "fin": null,
+     "intitule": "maire de Saint-Amand-les-Eaux"
+    },
+    {
+     "poste": "Q65518084",
+     "debut": "2026-03-15",
+     "fin": null,
+     "intitule": "conseiller municipal de Saint-Amand-les-Eaux"
+    },
+    {
+     "poste": "Q62584380",
+     "debut": "2025-01-30",
+     "fin": "2026-03-22",
+     "intitule": "maire de Saint-Amand-les-Eaux"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2022-06-22",
+     "fin": "2024-06-09",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q65518084",
+     "debut": "2020-05-18",
+     "fin": "2026-03-15",
+     "intitule": "conseiller municipal de Saint-Amand-les-Eaux"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2017-06-21",
+     "fin": "2022-06-21",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q65518084",
+     "debut": "2014-03-24",
+     "fin": "2020-05-17",
+     "intitule": "conseiller municipal de Saint-Amand-les-Eaux"
+    },
+    {
+     "poste": "Q66499577",
+     "debut": "2014-03-23",
+     "fin": null,
+     "intitule": "conseiller communautaire de la Porte du Hainaut"
+    }
+   ]
+  },
+  "zemmour": {
+   "wikidata": "Q288477",
+   "fonctions": [
+    {
+     "poste": "Q1255921",
+     "debut": "2021-12-05",
+     "fin": null,
+     "intitule": "président ou présidente"
+    }
+   ]
+  },
+  "lisnard": {
+   "wikidata": "Q3018298",
+   "fonctions": [
+    {
+     "poste": "Q30086002",
+     "debut": "2026-03-21",
+     "fin": null,
+     "intitule": "maire de Cannes"
+    },
+    {
+     "poste": "Q65478530",
+     "debut": "2026-03-15",
+     "fin": null,
+     "intitule": "conseiller municipal de Cannes"
+    },
+    {
+     "poste": "Q30086002",
+     "debut": "2020-05-23",
+     "fin": "2026-03-20",
+     "intitule": "maire de Cannes"
+    },
+    {
+     "poste": "Q65478530",
+     "debut": "2020-05-18",
+     "fin": "2026-03-14",
+     "intitule": "conseiller municipal de Cannes"
+    },
+    {
+     "poste": "Q63758885",
+     "debut": "2015-04-02",
+     "fin": null,
+     "intitule": "conseiller départemental des Alpes-Maritimes"
+    },
+    {
+     "poste": "Q30086002",
+     "debut": "2014-04-05",
+     "fin": "2020-05-22",
+     "intitule": "maire de Cannes"
+    },
+    {
+     "poste": "Q66499499",
+     "debut": "2014-03-30",
+     "fin": null,
+     "intitule": "conseiller communautaire de Cannes Pays de Lérins"
+    },
+    {
+     "poste": "Q65478530",
+     "debut": "2014-03-30",
+     "fin": "2020-05-17",
+     "intitule": "conseiller municipal de Cannes"
+    },
+    {
+     "poste": "Q60617450",
+     "debut": "2008-03-16",
+     "fin": null,
+     "intitule": "conseiller général des Alpes-Maritimes"
+    }
+   ]
+  },
+  "bertrand": {
+   "wikidata": null,
+   "fonctions": []
+  },
+  "ruffin": {
+   "wikidata": "Q3085763",
+   "fonctions": [
+    {
+     "poste": "Q3044918",
+     "debut": "2024-07-08",
+     "fin": null,
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2022-06-22",
+     "fin": "2024-06-09",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2017-06-21",
+     "fin": "2022-06-21",
+     "intitule": "député français"
+    }
+   ]
+  },
+  "batho": {
+   "wikidata": "Q291385",
+   "fonctions": [
+    {
+     "poste": "Q3044918",
+     "debut": "2024-07-08",
+     "fin": null,
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2022-06-22",
+     "fin": "2024-06-09",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2017-06-21",
+     "fin": "2022-06-21",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2013-08-03",
+     "fin": "2017-06-20",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2012-06-20",
+     "fin": "2012-07-21",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2007-06-20",
+     "fin": "2012-06-16",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q30461",
+     "debut": "1990",
+     "fin": "1992",
+     "intitule": "président ou présidente"
+    }
+   ]
+  },
+  "bouamrane": {
+   "wikidata": "Q98251165",
+   "fonctions": [
+    {
+     "poste": "Q62585771",
+     "debut": "2026-03-28",
+     "fin": null,
+     "intitule": "maire de Saint-Ouen-sur-Seine"
+    },
+    {
+     "poste": "Q65521234",
+     "debut": "2026-03-22",
+     "fin": null,
+     "intitule": "conseiller municipal de Saint-Ouen-sur-Seine"
+    },
+    {
+     "poste": "Q15818143",
+     "debut": "2022-11-24",
+     "fin": null,
+     "intitule": "président du conseil de surveillance"
+    },
+    {
+     "poste": "Q63758860",
+     "debut": "2021-07-01",
+     "fin": null,
+     "intitule": "conseiller départemental de la Seine-Saint-Denis"
+    },
+    {
+     "poste": "Q129416100",
+     "debut": "2021-07-01",
+     "fin": null,
+     "intitule": "vice-président du conseil départemental de la Seine-Saint-Denis"
+    },
+    {
+     "poste": "Q65521234",
+     "debut": "2020-06-28",
+     "fin": "2026-03-22",
+     "intitule": "conseiller municipal de Saint-Ouen-sur-Seine"
+    },
+    {
+     "poste": "Q62585771",
+     "debut": "2020-06-28",
+     "fin": "2026-03-28",
+     "intitule": "maire de Saint-Ouen-sur-Seine"
+    }
+   ]
+  },
+  "arthaud": {
+   "wikidata": "Q439490",
+   "fonctions": [
+    {
+     "poste": "Q17221",
+     "debut": "2008-12-08",
+     "fin": null,
+     "intitule": "porte-parole"
+    },
+    {
+     "poste": "Q65532287",
+     "debut": "2008-03-21",
+     "fin": "2014-04-04",
+     "intitule": "conseiller municipal de Vaulx-en-Velin"
+    }
+   ]
+  },
+  "dupont-aignan": {
+   "wikidata": "Q12961",
+   "fonctions": [
+    {
+     "poste": "Q61958695",
+     "debut": "2026-03-22",
+     "fin": null,
+     "intitule": "maire de Yerres"
+    },
+    {
+     "poste": "Q65534511",
+     "debut": "2026-03-15",
+     "fin": null,
+     "intitule": "conseiller municipal de Yerres"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2022-06-22",
+     "fin": "2024-06-09",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2017-06-21",
+     "fin": "2022-06-21",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2012-06-20",
+     "fin": "2017-06-20",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2007-06-20",
+     "fin": "2012-06-19",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "2002-06-19",
+     "fin": "2007-06-19",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q3044918",
+     "debut": "1997-06-01",
+     "fin": "2002-06-18",
+     "intitule": "député français"
+    },
+    {
+     "poste": "Q61958695",
+     "debut": "1995-06-25",
+     "fin": "2017-07-23",
+     "intitule": "maire de Yerres"
+    }
+   ]
+  },
+  "philippot": {
+   "wikidata": "Q3074223",
+   "fonctions": [
+    {
+     "poste": "Q1553195",
+     "debut": "2017-09-29",
+     "fin": null,
+     "intitule": "dirigeant de parti politique"
+    },
+    {
+     "poste": "Q62457650",
+     "debut": "2016-01-01",
+     "fin": null,
+     "intitule": "conseiller régional du Grand Est"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2014-07-01",
+     "fin": null,
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q5261098",
+     "debut": "2012-07-12",
+     "fin": null,
+     "intitule": "chef adjoint"
+    },
+    {
+     "poste": "Q63482566",
+     "debut": "2009",
+     "fin": null,
+     "intitule": "inspecteur de l'administration"
+    }
+   ]
+  },
+  "asselineau": {
+   "wikidata": "Q12972",
+   "fonctions": [
+    {
+     "poste": "Q1553195",
+     "debut": "2007-03-25",
+     "fin": null,
+     "intitule": "dirigeant de parti politique"
+    },
+    {
+     "poste": "Q51236772",
+     "debut": "2001-03-25",
+     "fin": "2008-03-24",
+     "intitule": "conseiller de Paris"
+    },
+    {
+     "poste": "Q18078230",
+     "debut": "2001",
+     "fin": null,
+     "intitule": "inspecteur général des finances"
+    }
+   ]
+  },
+  "egger": {
+   "wikidata": "Q108584624",
+   "fonctions": []
+  },
+  "mikolajczak": {
+   "wikidata": null,
+   "fonctions": []
+  },
+  "kazib": {
+   "wikidata": "Q106405647",
+   "fonctions": []
+  },
+  "labib": {
+   "wikidata": null,
+   "fonctions": []
+  },
+  "branco": {
+   "wikidata": null,
+   "fonctions": []
+  },
+  "massard": {
+   "wikidata": "Q122803246",
+   "fonctions": [
+    {
+     "poste": "Q65506713",
+     "debut": "2026",
+     "fin": null,
+     "intitule": "conseiller municipal de Pontivy"
+    },
+    {
+     "poste": "Q27169",
+     "debut": "2023-09-24",
+     "fin": "2024",
+     "intitule": "député européen"
+    },
+    {
+     "poste": "Q17221",
+     "debut": "2019",
+     "fin": "2023",
+     "intitule": "porte-parole"
+    }
+   ]
+  },
+  "mathieu": {
+   "wikidata": null,
+   "fonctions": []
+  },
+  "lalanne": {
+   "wikidata": "Q3081533",
+   "fonctions": []
+  }
+ }
+}
