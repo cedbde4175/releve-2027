@@ -198,3 +198,9 @@ mark { background: var(--incertain-fond); color: var(--incertain-encre); border-
 .journal { padding-left: 18px; }
 .journal li { margin-bottom: 8px; }
 .journal time { display: block; font-size: 0.85rem; color: var(--encre-douce); }
+.fiches { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--trait); }
+.fiches li { padding: 10px 0; border-bottom: 1px solid var(--trait); overflow-wrap: anywhere; }
+.fiches .source-meta { margin: 4px 0 0; }
+.lien-fiche { font-family: var(--police-titre); text-decoration: none; }
+.lien-fiche:hover { text-decoration: underline; }
+.fiche-citation { font-size: 1.2rem; margin: 12px 0; }
