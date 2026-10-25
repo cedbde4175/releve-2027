@@ -10,7 +10,6 @@ on:
 
 permissions:
   contents: write
-  issues: write
   pages: write
   id-token: write
 
@@ -33,20 +32,13 @@ jobs:
         run: |
           git config user.name "releve-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add archive site/data/veille.json
+          git add archive site/data/veille.json site/data/auto.json
           if git diff --cached --quiet; then
             echo "Aucune nouvelle capture."
           else
             git commit -m "Capture du $(date -u +%Y-%m-%d)"
             git push
           fi
-      - name: Ouvrir une demande de relecture
-        if: hashFiles('capture/rapport.md') != ''
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh label create relecture --color FBCA04 --description "Changement détecté à relire" 2>/dev/null || true
-          gh issue create --title "Relecture : pages modifiées le $(date -u +%d/%m/%Y)" --label relecture --body-file capture/rapport.md
 
   deployer:
     needs: capturer

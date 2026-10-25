@@ -160,3 +160,6 @@ th { color: var(--encre-douce); font-weight: 600; }
 .pied { border-top: 1px solid var(--trait); padding-top: 16px; padding-bottom: 32px; font-size: 0.85rem; color: var(--encre-douce); }
 .calendrier li > div { min-width: 0; }
 .calendrier .pastille { white-space: normal; }
+.carte-auto { border-style: dashed; }
+blockquote.barre { text-decoration: line-through; text-decoration-color: var(--trait-fort); color: var(--encre-douce); }
+.auto-mention { font-size: 0.78rem; color: var(--encre-douce); margin: 6px 0 0; }

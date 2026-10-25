@@ -6,9 +6,11 @@ Pour chaque page de capture/pages.json :
 - si le texte a changé, archive la nouvelle version dans archive/<page>/,
   demande une copie à Internet Archive et note le changement.
 
-Les changements détectés sont publiés dans site/data/veille.json comme
-« modifications détectées, non relues ». Aucune proposition n'est créée
-automatiquement : la relecture humaine reste obligatoire.
+Toutes les différences de texte sont publiées dans site/data/veille.json.
+Pour les pages de programme (« auto » dans pages.json), les phrases de contenu
+réellement ajoutées ou retirées sont publiées telles quelles dans
+site/data/auto.json : des citations exactes, jamais reformulées, avec l'archive
+avant et après. Aucun texte n'est rédigé ni résumé automatiquement.
 
 Bibliothèque standard uniquement, pour tourner gratuitement sur GitHub Actions.
 """
@@ -33,7 +35,6 @@ PAGES = RACINE / "capture" / "pages.json"
 ARCHIVE = RACINE / "archive"
 ETAT = ARCHIVE / "etat.json"
 VEILLE = RACINE / "site" / "data" / "veille.json"
-RAPPORT = RACINE / "capture" / "rapport.md"
 
 AGENT = "ReleveBot/0.1 (veille non commerciale de pages de programmes ; https://github.com/cedbde4175/releve-2027)"
 DELAI = 30
@@ -42,6 +43,12 @@ EXTRAITS_MAX = 8
 LONGUEUR_EXTRAIT = 280
 CHANGEMENTS_MAX = 300
 RELANCES_WAYBACK = 6
+AUTO = RACINE / "site" / "data" / "auto.json"
+ARCHIVE_WEB = "https://github.com/cedbde4175/releve-2027/blob/main/archive/"
+PASSAGE_MIN_CARACTERES = 80
+PASSAGE_MIN_MOTS = 12
+CITATION_MAX = 400
+PASSAGES_MAX = 500
 PAUSE_WAYBACK = 8
 
 IGNORER = {"script", "style", "noscript", "svg", "template", "iframe", "head"}
@@ -156,6 +163,48 @@ def comparer(avant, apres):
     }
 
 
+def lignes_du_site(pid, url, pages, etat):
+    """Lignes présentes sur les autres pages suivies du même site : menus, pieds de page, bandeaux."""
+    domaine = urlsplit(url).netloc
+    communes = set()
+    for autre in pages:
+        if autre["id"] == pid or urlsplit(autre["url"]).netloc != domaine:
+            continue
+        versions = etat.get(autre["id"], {}).get("versions", [])
+        if versions:
+            try:
+                communes.update((ARCHIVE / versions[-1]["fichier"]).read_text(encoding="utf-8").split("\n"))
+            except FileNotFoundError:
+                pass
+    return communes
+
+
+def est_passage(ligne, exclues):
+    """Une phrase de contenu, pas un menu, un bouton ou une date isolée."""
+    return (len(ligne) >= PASSAGE_MIN_CARACTERES and len(ligne.split()) >= PASSAGE_MIN_MOTS
+            and ligne not in exclues)
+
+
+def passages(avant, apres, exclues):
+    """Lignes de contenu réellement ajoutées ou retirées (un simple déplacement ne compte pas)."""
+    lignes_avant, lignes_apres = set(avant.split("\n")), set(apres.split("\n"))
+    a, b = avant.split("\n"), apres.split("\n")
+    trouves = []
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        if op in ("replace", "delete"):
+            trouves += [("retrait", x) for x in a[i1:i2] if x not in lignes_apres and est_passage(x, exclues)]
+        if op in ("replace", "insert"):
+            trouves += [("ajout", x) for x in b[j1:j2] if x not in lignes_avant and est_passage(x, exclues)]
+    return trouves
+
+
+def citer(ligne):
+    if len(ligne) <= CITATION_MAX:
+        return ligne, False
+    coupe = ligne[:CITATION_MAX].rsplit(" ", 1)[0]
+    return coupe + " …", True
+
+
 def lire_json(chemin, defaut):
     try:
         return json.loads(chemin.read_text(encoding="utf-8"))
@@ -176,8 +225,9 @@ def main():
     robots = {}
     t = maintenant()
     horodatage = t.strftime("%Y-%m-%dT%H%MZ")
-    nouveaux = []
     relances = 0
+    auto = lire_json(AUTO, {"passages": []})
+    publies = auto.get("passages", [])
 
     for page in pages:
         pid, url = page["id"], page["url"]
@@ -233,7 +283,19 @@ def main():
                       "wayback_avant": precedente.get("wayback"), "wayback_apres": version["wayback"],
                       "releve": False, **diff}
                 changements.append(ch)
-                nouveaux.append(ch)
+                if page.get("auto"):
+                    exclues = lignes_du_site(pid, url, pages, etat)
+                    for n, (sens, ligne) in enumerate(passages(avant, texte, exclues)):
+                        citation, tronquee = citer(ligne)
+                        publies.append({
+                            "id": f"{pid}-{horodatage}-{n}", "date": t.isoformat(), "sens": sens,
+                            "page": pid, "candidat": page["candidat"], "url": url, "libelle": page["libelle"],
+                            "citation": citation, "tronquee": tronquee,
+                            "archive_avant": ARCHIVE_WEB + precedente["fichier"],
+                            "archive_apres": ARCHIVE_WEB + fichier,
+                            "wayback_avant": precedente.get("wayback"), "wayback_apres": version["wayback"],
+                        })
+                        print(f"  passage publié ({sens})")
                 print(f"  modifiée : +{diff['lignes_ajoutees']} / -{diff['lignes_retirees']} lignes")
         else:
             print("  première capture")
@@ -252,22 +314,7 @@ def main():
                        "wayback": next((v["wayback"] for v in reversed(versions) if v.get("wayback")), None)})
     ecrire_json(VEILLE, {"maj": t.isoformat(), "pages": resume,
                          "changements": changements[-CHANGEMENTS_MAX:]})
-
-    if nouveaux:
-        lignes = [f"Capture du {t.strftime('%d/%m/%Y %H:%M')} UTC : {len(nouveaux)} page(s) modifiée(s), à relire.\n"]
-        for ch in nouveaux:
-            lignes.append(f"### {ch['libelle']}\n{ch['url']}\n")
-            lignes.append(f"+{ch['lignes_ajoutees']} / -{ch['lignes_retirees']} lignes\n")
-            for x in ch["extraits_ajoutes"]:
-                lignes.append(f"> + {x}")
-            for x in ch["extraits_retires"]:
-                lignes.append(f"> − {x}")
-            lignes.append("")
-        lignes.append("Rien n'est publié comme proposition sans relecture : si un changement concerne une proposition, "
-                      "l'ajouter à site/data/evenements.json avec la citation exacte et sa source.")
-        RAPPORT.write_text("\n".join(lignes) + "\n", encoding="utf-8")
-    elif RAPPORT.exists():
-        RAPPORT.unlink()
+    ecrire_json(AUTO, {"maj": t.isoformat(), "passages": publies[-PASSAGES_MAX:]})
 
 
 if __name__ == "__main__":
