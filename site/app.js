@@ -358,7 +358,7 @@ function vueVeille() {
   const libelleStatut = {
     ok: "capturée", jamais: "première capture à venir", erreur: "inaccessible lors de la dernière tentative",
     refus_robots: "capture refusée par le site (robots.txt)", texte_insuffisant: "texte non lisible sans JavaScript",
-    format_non_suivi: "format non suivi",
+    format_non_suivi: "format non suivi", illisible: "texte illisible (décodage)",
   };
   const cartes = changements
     .map((c) => {

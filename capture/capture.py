@@ -14,6 +14,7 @@ Bibliothèque standard uniquement, pour tourner gratuitement sur GitHub Actions.
 """
 
 import difflib
+import gzip
 import hashlib
 import json
 import re
@@ -108,9 +109,13 @@ def autorise(url, robots_cache):
 
 
 def telecharger(url):
-    req = urllib.request.Request(url, headers={"User-Agent": AGENT, "Accept-Language": "fr-FR,fr;q=0.9"})
+    req = urllib.request.Request(url, headers={"User-Agent": AGENT, "Accept-Language": "fr-FR,fr;q=0.9",
+                                               "Accept-Encoding": "gzip"})
     with urllib.request.urlopen(req, timeout=DELAI) as r:
         brut = r.read()
+        # Certains serveurs compressent même sans qu'on le demande : on se fie aussi à la signature gzip.
+        if r.headers.get("Content-Encoding", "").lower() == "gzip" or brut[:2] == b"\x1f\x8b":
+            brut = gzip.decompress(brut)
         jeu = r.headers.get_content_charset() or "utf-8"
         return brut.decode(jeu, "replace"), r.headers.get_content_type()
 
@@ -194,6 +199,11 @@ def main():
             e["statut"] = "format_non_suivi"
             continue
         texte = extraire_texte(html)
+        if texte.count("\ufffd") > 20:
+            # Contenu binaire ou mal décodé : on n'archive pas du bruit.
+            e["statut"] = "illisible"
+            print("  texte illisible")
+            continue
         e.pop("erreur", None)
         e["statut"] = "ok" if len(texte) >= TEXTE_MIN else "texte_insuffisant"
         e["derniere_reussite"] = t.isoformat()

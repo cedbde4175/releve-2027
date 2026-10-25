@@ -1,25 +1,4 @@
 {
- "rn-accueil": {
-  "versions": [
-   {
-    "date": "2026-10-24T19:17:53+00:00",
-    "empreinte": "c0b846c32085bb70b98a889218a1b4a89890fa75bb0db2716f50093924c0e9e7",
-    "fichier": "rn-accueil/2026-10-24T1917Z.txt",
-    "caracteres": 48347,
-    "wayback": null
-   },
-   {
-    "date": "2026-10-25T05:39:32+00:00",
-    "empreinte": "6c9a3494081153ff67433843b5165b92172cedfa80fee1af3f85f05afd1ca92a",
-    "fichier": "rn-accueil/2026-10-25T0539Z.txt",
-    "caracteres": 48782,
-    "wayback": null
-   }
-  ],
-  "derniere_tentative": "2026-10-25T05:39:32+00:00",
-  "statut": "ok",
-  "derniere_reussite": "2026-10-25T05:39:32+00:00"
- },
  "lfi-programme": {
   "versions": [
    {
