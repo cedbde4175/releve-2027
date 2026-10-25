@@ -7,11 +7,18 @@
     "fichier": "rn-accueil/2026-10-24T1917Z.txt",
     "caracteres": 48347,
     "wayback": null
+   },
+   {
+    "date": "2026-10-25T05:39:32+00:00",
+    "empreinte": "6c9a3494081153ff67433843b5165b92172cedfa80fee1af3f85f05afd1ca92a",
+    "fichier": "rn-accueil/2026-10-25T0539Z.txt",
+    "caracteres": 48782,
+    "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "lfi-programme": {
   "versions": [
@@ -23,9 +30,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "lfi-aec": {
   "versions": [
@@ -35,11 +42,18 @@
     "fichier": "lfi-aec/2026-10-24T1917Z.txt",
     "caracteres": 6445,
     "wayback": null
+   },
+   {
+    "date": "2026-10-25T05:39:32+00:00",
+    "empreinte": "bbeaf100730ee192bb1338a141241ff2b4cf92232215ed9bc6f611c75e5ed36e",
+    "fichier": "lfi-aec/2026-10-25T0539Z.txt",
+    "caracteres": 6403,
+    "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "hor-manifeste": {
   "versions": [
@@ -51,9 +65,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "hor-narco": {
   "versions": [
@@ -62,12 +76,12 @@
     "empreinte": "9baf869d541cee274f967405910e62865845fe94dbaded10195d1231fc801314",
     "fichier": "hor-narco/2026-10-24T1917Z.txt",
     "caracteres": 12098,
-    "wayback": null
+    "wayback": "https://web.archive.org/web/20261025054155/https://horizonsleparti.fr/le-plan-dedouard-philippe-contre-le-narcotrafic/"
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "attal-programme": {
   "versions": [
@@ -79,9 +93,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "attal-education": {
   "versions": [
@@ -93,9 +107,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "attal-travail": {
   "versions": [
@@ -107,9 +121,9 @@
     "wayback": "https://web.archive.org/web/20261024192111/https://attalpresident.fr/programme/travail-salaires"
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "attal-frontieres": {
   "versions": [
@@ -121,9 +135,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "attal-ia": {
   "versions": [
@@ -135,9 +149,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "attal-dette": {
   "versions": [
@@ -149,9 +163,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "attal-dette-eco": {
   "versions": [
@@ -163,9 +177,9 @@
     "wayback": "https://web.archive.org/web/20261024192502/https://attalpresident.fr/programme/dette-ecologique"
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "lr-propositions": {
   "versions": [
@@ -177,9 +191,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "eco-projet": {
   "versions": [
@@ -191,13 +205,13 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "pcf-programme": {
   "versions": [],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "erreur",
   "erreur": "HTTP Error 403: Forbidden"
  },
@@ -211,9 +225,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "pp-projet": {
   "versions": [
@@ -225,9 +239,9 @@
     "wayback": "https://web.archive.org/web/20261024192720/https://place-publique.eu/pages/69jA2SKIG5udlNX7wI3dmc/le-projet"
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  },
  "glucks-accueil": {
   "versions": [
@@ -239,8 +253,8 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-24T19:17:53+00:00",
+  "derniere_tentative": "2026-10-25T05:39:32+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-24T19:17:53+00:00"
+  "derniere_reussite": "2026-10-25T05:39:32+00:00"
  }
 }
