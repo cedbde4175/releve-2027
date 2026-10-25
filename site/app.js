@@ -114,6 +114,7 @@ async function charger() {
   donnees.themes = donnees.derive?.themes || [];
   donnees.themesParId = Object.fromEntries(donnees.themes.map((t) => [t.id, t]));
   donnees.phrases = donnees.derive?.phrases || [];
+  donnees.fiches = donnees.derive?.fiches || [];
   donnees.pagesProgramme = new Set(donnees.derive?.pages_programme || []);
 }
 
@@ -503,6 +504,7 @@ function vueCandidat(id) {
 
       <h2>Son programme par thème</h2>
       ${blocThemes}
+      ${aDesProgrammes ? `<p><a href="#/propositions/${c.id}">Toutes ses propositions relevées, avec leur historique</a></p>` : ""}
 
       <h2>Historique</h2>
       ${evenements.length
@@ -618,6 +620,7 @@ function vueThemes() {
       <h1>Thèmes</h1>
       <p class="chapeau">Les phrases actuelles des pages de programme suivies, classées par thème selon une liste publique de mots-clés. Aucun texte n'est résumé : vous lisez les phrases exactes. Un thème suivi filtre votre relevé.</p>
       <ul class="liste">${lignes}</ul>
+      <p><a href="#/propositions">Toutes les propositions relevées, avec leur historique</a></p>
       <p class="source-meta">État au ${formaterDate(donnees.derive?.maj)}. Le classement par mots-clés peut se tromper ; chaque phrase garde son lien vers la page et son archive.</p>
     </section>`;
 }
@@ -632,7 +635,7 @@ function vueTheme(id) {
     .map((c) => {
       const phrases = donnees.phrases.filter((p) => p.candidat === c.id && p.themes.includes(id));
       const ligne = (p) => `<li><blockquote>« ${echapper(p.texte)} »</blockquote>
-        <p class="source-meta">${lienExterne(p.url, echapper(p.libelle))} · ${lienExterne(p.archive, `texte archivé le ${formaterCourt(p.date)}`)}</p></li>`;
+        <p class="source-meta"><a href="#/fiche/${p.fiche}">Fiche et historique</a> · ${lienExterne(p.url, echapper(p.libelle))} · ${lienExterne(p.archive, `texte archivé le ${formaterCourt(p.date)}`)}</p></li>`;
       return `<div class="bloc bloc-theme">
         <h3><a href="#/candidat/${c.id}">${echapper(nomComplet(c))}</a></h3>
         ${phrases.length
@@ -673,7 +676,7 @@ function construireCorpus() {
       lien: e.candidats[0] ? `#/candidat/${e.candidats[0]}` : "#/releve", date: e.date, candidat: e.candidats[0],
     })),
     ...donnees.phrases.map((p) => ({
-      type: "Programme", titre: `${nomDe(p.candidat)}, ${p.libelle}`, texte: `« ${p.texte} »`, lien: p.url, externe: true,
+      type: "Programme", titre: `${nomDe(p.candidat)}, ${p.libelle}`, texte: `« ${p.texte} »`, lien: `#/fiche/${p.fiche}`,
       date: p.date, candidat: p.candidat,
     })),
     ...(donnees.auto?.passages || []).map((p) => ({
@@ -772,7 +775,7 @@ function vueDonnees() {
     ["candidats.json", "Fiches candidats et statuts"],
     ["evenements.json", "Événements relus"],
     ["auto.json", "Phrases ajoutées ou retirées, publiées automatiquement"],
-    ["derive.json", "Phrases actuelles des programmes par thème, remplacements"],
+    ["derive.json", "Fiches propositions avec leurs versions, thèmes, remplacements"],
     ["calendrier.json", "Dates de l'élection"],
     ["sources.json", "Sources citées"],
     ["veille.json", "État des pages suivies et différences brutes"],
@@ -800,6 +803,91 @@ function vueDonnees() {
     </section>`;
 }
 
+// ---------- Fiches propositions, construites automatiquement à partir des pages de programme ----------
+
+function libelleStatutFiche(f) {
+  return f.statut === "retiree"
+    ? `<span class="pastille pastille-incertain">Retirée de la page le ${formaterCourt(f.retiree_le)}</span>`
+    : `<span class="pastille">En ligne depuis le ${formaterCourt(f.premiere_vue)}</span>`;
+}
+
+function ligneFiche(f, avecCandidat = true) {
+  const cand = donnees.candidatsParId[f.candidat];
+  const texte = f.versions[f.versions.length - 1].texte;
+  return `<li><a class="lien-fiche" href="#/fiche/${f.id}">« ${echapper(texte.length > 220 ? texte.slice(0, 219) + "…" : texte)} »</a>
+    <p class="source-meta">${avecCandidat && cand ? `${echapper(nomComplet(cand))} · ` : ""}${libelleStatutFiche(f)}${f.versions.length > 1 ? ` · ${f.versions.length} versions` : ""}</p></li>`;
+}
+
+function vuePropositions(candidat) {
+  const cand = candidat ? donnees.candidatsParId[candidat] : null;
+  const fiches = donnees.fiches.filter((f) => !candidat || f.candidat === candidat);
+  const theme = stockage.filtreTheme || "";
+  const filtrees = fiches.filter((f) => !theme || f.themes.includes(theme));
+  const options = donnees.themes
+    .map((t) => `<option value="${t.id}"${t.id === theme ? " selected" : ""}>${echapper(t.libelle)}</option>`)
+    .join("");
+  const enLigne = filtrees.filter((f) => f.statut === "en_ligne");
+  const retirees = filtrees.filter((f) => f.statut === "retiree");
+  const modifiees = filtrees.filter((f) => f.versions.length > 1);
+  return `
+    <section>
+      <p class="fil">${cand ? `<a href="#/candidat/${cand.id}">${echapper(nomComplet(cand))}</a>` : `<a href="#/themes">Thèmes</a>`}</p>
+      <h1>Propositions relevées${cand ? ` : ${echapper(nomComplet(cand))}` : ""}</h1>
+      <p class="chapeau">Une fiche par phrase des pages de programme suivies, avec son texte exact, son thème et toutes ses versions archivées. Elles sont construites automatiquement : Relevé ne rédige ni ne résume.</p>
+      <form class="recherche" onsubmit="return false">
+        <label class="evitement" for="filtre-theme">Thème</label>
+        <select id="filtre-theme"><option value="">Tous les thèmes</option>${options}</select>
+      </form>
+      <p class="source-meta">${enLigne.length} en ligne · ${modifiees.length} modifiée${modifiees.length > 1 ? "s" : ""} · ${retirees.length} retirée${retirees.length > 1 ? "s" : ""}.</p>
+      ${modifiees.length ? `<h2>Modifiées</h2><ul class="fiches">${modifiees.map((f) => ligneFiche(f, !cand)).join("")}</ul>` : ""}
+      ${retirees.length ? `<h2>Retirées des pages</h2><ul class="fiches">${retirees.map((f) => ligneFiche(f, !cand)).join("")}</ul>` : ""}
+      <h2>En ligne</h2>
+      ${enLigne.length ? `<ul class="fiches">${enLigne.map((f) => ligneFiche(f, !cand)).join("")}</ul>` : `<p class="vide">Aucune phrase de programme relevée${cand ? " pour ce candidat" : ""}${theme ? " sur ce thème" : ""}.</p>`}
+    </section>`;
+}
+
+function vueFiche(id) {
+  const f = donnees.fiches.find((x) => x.id === id);
+  if (!f) return `<section><h1>Fiche introuvable</h1><p>Elle a peut-être été recalculée. <a href="#/themes">Retour aux thèmes</a></p></section>`;
+  const cand = donnees.candidatsParId[f.candidat];
+  const actuelle = f.versions[f.versions.length - 1];
+  const versions = [...f.versions]
+    .reverse()
+    .map((v, i) => {
+      const texte = v.diff
+        ? `<p class="diff-mots">« ${v.diff.map(([op, t]) => (op === "=" ? echapper(t) : op === "-" ? `<del>${echapper(t)}</del>` : `<ins>${echapper(t)}</ins>`)).join(" ")} »</p>`
+        : `<blockquote>« ${echapper(v.texte)} »</blockquote>`;
+      return `<li><time>${formaterDate(v.date)}${i === 0 ? " · version actuelle" : ""}${!v.diff && i === f.versions.length - 1 ? " · première capture" : ""}</time>
+        ${texte}
+        <p class="source-meta">${lienExterne(v.archive, "Texte archivé")}${v.wayback ? ` · ${lienExterne(v.wayback, "Internet Archive")}` : ""}</p></li>`;
+    })
+    .join("");
+  const themes = f.themes.map((t) => donnees.themesParId[t]).filter(Boolean);
+  return `
+    <section class="fiche">
+      <p class="fil"><a href="#/propositions/${f.candidat}">Propositions${cand ? ` de ${echapper(nomComplet(cand))}` : ""}</a></p>
+      <p class="carte-haut"><span class="type">Proposition relevée</span>${cand ? `<span class="qui"><a href="#/candidat/${cand.id}">${echapper(nomComplet(cand))}</a></span>` : ""}</p>
+      <blockquote class="fiche-citation${f.statut === "retiree" ? " barre" : ""}">« ${echapper(actuelle.texte)} »</blockquote>
+      <p>${libelleStatutFiche(f)}${actuelle.tronquee ? ' <span class="source-meta">Passage abrégé.</span>' : ""}</p>
+
+      <h2>Ce qu'on sait</h2>
+      <ul>
+        <li>Publiée sur ${lienExterne(f.url, echapper(f.libelle))}, relevée pour la première fois le ${formaterDate(f.premiere_vue)}.</li>
+        <li>${f.versions.length > 1 ? `Modifiée ${f.versions.length - 1} fois depuis ; toutes les versions sont ci-dessous.` : "Aucune modification depuis la première capture."}</li>
+        ${f.statut === "retiree" ? `<li>Retirée de la page le ${formaterDate(f.retiree_le)}. Une phrase retirée d'une page n'est pas forcément un renoncement.</li>` : ""}
+        <li>Thème${themes.length > 1 ? "s" : ""} : ${themes.length ? themes.map((t) => `<a href="#/theme/${t.id}">${echapper(t.libelle)}</a>`).join(", ") : "aucun mot-clé reconnu"}.</li>
+      </ul>
+
+      <h2>Ce qu'on ne sait pas</h2>
+      <p>Objectif, public visé, coût, financement et calendrier ne sont pas renseignés : Relevé ne rédige rien et ne publie que ce que dit la page. Ils figurent peut-être dans le texte ci-dessus ou sur la page officielle.</p>
+
+      <h2>Historique</h2>
+      <ol class="frise">${versions}</ol>
+      <p class="source-meta">Fiche construite automatiquement : une phrase qui disparaît pendant qu'une phrase très proche apparaît est comptée comme une nouvelle version de la même fiche.</p>
+      <p>${lienSignaler("fiche proposition " + f.id)}</p>
+    </section>`;
+}
+
 function vueMethode() {
   return `
     <section class="texte">
@@ -811,7 +899,7 @@ function vueMethode() {
         <li>Des événements datés (candidatures, investitures, calendrier), chacun avec au moins une source et sa date.</li>
         <li>Des propositions uniquement avec la phrase exacte, entre guillemets, sa date et au moins une source primaire archivée. À défaut de source primaire, la proposition porte la mention « rapportée par la presse ».</li>
         <li>Chaque jour, de façon automatique, les phrases ajoutées ou retirées sur les pages de programme officielles, copiées mot pour mot, avec la page et le texte archivé avant et après. Quand une phrase retirée et une phrase ajoutée lors de la même capture se ressemblent fortement, elles sont présentées ensemble, en avant/après, avec les mots changés marqués.</li>
-        <li>Les phrases actuelles des pages de programme, classées par thème (voir ci-dessous).</li>
+        <li>Une fiche par phrase des pages de programme, avec son texte exact, son thème et toutes ses versions archivées : date de première apparition, modifications mot à mot, date de retrait. Les champs comme l'objectif ou le coût ne sont pas rédigés.</li>
         <li>Les fonctions occupées par chaque candidat, lues automatiquement dans Wikidata, base collaborative, avec un lien pour vérifier.</li>
         <li>Quand elles existent, les vérifications publiées par des médias de fact-checking et mentionnant un candidat, avec le verdict de l'éditeur, cité tel quel.</li>
       </ul>
@@ -897,11 +985,11 @@ function afficher() {
   const vues = {
     releve: vueReleve, candidats: vueCandidats, candidat: vueCandidat, themes: vueThemes, theme: vueTheme,
     chercher: vueChercher, calendrier: vueCalendrier, veille: vueVeille, methode: vueMethode, suivis: vueSuivis,
-    donnees: vueDonnees,
+    donnees: vueDonnees, propositions: vuePropositions, fiche: vueFiche,
   };
   const main = document.getElementById("contenu");
   main.innerHTML = (vues[route] || vueReleve)(param);
-  const onglet = { candidat: "candidats", theme: "themes", donnees: "methode" }[route] || route;
+  const onglet = { candidat: "candidats", theme: "themes", donnees: "methode", propositions: "themes", fiche: "themes" }[route] || route;
   document.querySelectorAll("[data-onglet]").forEach((a) => {
     if (a.dataset.onglet === onglet) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
@@ -969,6 +1057,12 @@ document.addEventListener("click", (ev) => {
 
 // Recherche : les résultats se mettent à jour pendant la frappe, sans redessiner le champ.
 document.addEventListener("input", (ev) => {
+  if (ev.target.id === "filtre-theme") {
+    stockage.filtreTheme = ev.target.value;
+    ecrireStockage(stockage);
+    afficher();
+    return;
+  }
   if (ev.target.id !== "requete" && ev.target.id !== "filtre-candidat") return;
   const requete = document.getElementById("requete").value;
   const candidat = document.getElementById("filtre-candidat").value;

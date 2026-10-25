@@ -12,6 +12,7 @@ Bibliothèque standard uniquement.
 """
 
 import difflib
+import hashlib
 import re
 import subprocess
 import unicodedata
@@ -84,33 +85,85 @@ def themes_de(texte):
     return [tid for tid, motif in MOTIFS if motif.search(t)]
 
 
-def phrases_actuelles(pages, etat):
-    """Lignes de contenu de la dernière version de chaque page de programme, telles quelles."""
-    phrases = []
-    for page in pages:
-        if not page.get("auto"):
+def lignes_de_contenu(fichier, exclues):
+    try:
+        texte = (ARCHIVE / fichier).read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return None
+    vues = []
+    for ligne in texte.split("\n"):
+        if ligne not in vues and est_passage(ligne, exclues):
+            vues.append(ligne)
+    return vues
+
+
+def version_de(ligne, v, precedente=None):
+    citation, tronquee = citer(ligne)
+    version = {"date": v["date"], "texte": citation, "tronquee": tronquee, "archive": ARCHIVE_WEB + v["fichier"],
+               "wayback": v.get("wayback")}
+    if precedente:
+        version["diff"] = diff_mots(precedente, citation)
+    return version
+
+
+def fiches_page(page, pages, etat):
+    """Suit chaque phrase de contenu d'une page de programme à travers toutes ses versions archivées.
+
+    Une phrase qui disparaît en même temps qu'apparaît une phrase très proche est une nouvelle version
+    de la même fiche ; sinon elle est marquée retirée à la date de la capture. Aucun texte n'est rédigé.
+    """
+    exclues = lignes_du_site(page["id"], page["url"], pages, etat)
+    actives = {}
+    fiches = []
+    for i, v in enumerate(etat.get(page["id"], {}).get("versions", [])):
+        lignes = lignes_de_contenu(v["fichier"], exclues)
+        if lignes is None:
             continue
-        versions = etat.get(page["id"], {}).get("versions", [])
-        if not versions:
-            continue
-        derniere = versions[-1]
-        try:
-            texte = (ARCHIVE / derniere["fichier"]).read_text(encoding="utf-8")
-        except FileNotFoundError:
-            continue
-        exclues = lignes_du_site(page["id"], page["url"], pages, etat)
-        vues = set()
-        for n, ligne in enumerate(texte.split("\n")):
-            if ligne in vues or not est_passage(ligne, exclues):
-                continue
-            vues.add(ligne)
-            citation, tronquee = citer(ligne)
-            phrases.append({
-                "id": f"{page['id']}-{n}", "candidat": page["candidat"], "page": page["id"],
-                "libelle": page["libelle"], "url": page["url"], "archive": ARCHIVE_WEB + derniere["fichier"],
-                "date": derniere["date"], "texte": citation, "tronquee": tronquee, "themes": themes_de(ligne),
-            })
-    return phrases
+        presentes = set(lignes)
+        nouvelles = [l for l in lignes if l not in actives]
+        if i and actives:
+            disparues = [l for l in actives if l not in presentes]
+            proches = sorted(
+                ((difflib.SequenceMatcher(None, d, n, autojunk=False).ratio(), d, n) for d in disparues for n in nouvelles),
+                key=lambda x: -x[0])
+            prises = set()
+            for ratio, d, n in proches:
+                if ratio < SIMILITUDE_MIN or d in prises or n in prises:
+                    continue
+                prises.update((d, n))
+                fiche = actives.pop(d)
+                fiche["versions"].append(version_de(n, v, fiche["versions"][-1]["texte"]))
+                actives[n] = fiche
+            for d in disparues:
+                if d not in prises:
+                    fiche = actives.pop(d)
+                    fiche["statut"] = "retiree"
+                    fiche["retiree_le"] = v["date"]
+            nouvelles = [n for n in nouvelles if n not in prises]
+        for n in nouvelles:
+            fiche = {
+                "id": hashlib.sha1(f"{page['id']}|{n}".encode("utf-8")).hexdigest()[:12],
+                "candidat": page["candidat"], "page": page["id"], "libelle": page["libelle"], "url": page["url"],
+                "premiere_vue": v["date"], "statut": "en_ligne", "versions": [version_de(n, v)],
+            }
+            actives[n] = fiche
+            fiches.append(fiche)
+    for fiche in fiches:
+        fiche["themes"] = themes_de(fiche["versions"][-1]["texte"])
+        fiche["date"] = fiche.get("retiree_le") or fiche["versions"][-1]["date"]
+    return fiches
+
+
+def fiches_propositions(pages, etat):
+    return [f for page in pages if page.get("auto") for f in fiches_page(page, pages, etat)]
+
+
+def phrases_actuelles(fiches):
+    """Les fiches encore en ligne, sous la forme simple utilisée par les thèmes et la recherche."""
+    return [{"id": f["id"], "fiche": f["id"], "candidat": f["candidat"], "page": f["page"], "libelle": f["libelle"],
+             "url": f["url"], "archive": f["versions"][-1]["archive"], "date": f["versions"][-1]["date"],
+             "texte": f["versions"][-1]["texte"], "tronquee": f["versions"][-1]["tronquee"], "themes": f["themes"]}
+            for f in fiches if f["statut"] == "en_ligne"]
 
 
 def diff_mots(avant, apres):
@@ -250,11 +303,13 @@ def main():
     evenements = lire_json(DONNEES / "evenements.json", {"evenements": []}).get("evenements", [])
 
     paires = remplacements(passages)
+    fiches = fiches_propositions(pages, etat)
     ecrire_json(DONNEES / "derive.json", {
         "maj": maj,
         "themes": [{"id": tid, "libelle": libelle, "mots": mots} for tid, libelle, mots in THEMES],
         "pages_programme": [p["id"] for p in pages if p.get("auto") and etat.get(p["id"], {}).get("versions")],
-        "phrases": phrases_actuelles(pages, etat),
+        "fiches": fiches,
+        "phrases": phrases_actuelles(fiches),
         "themes_passages": {p["id"]: themes_de(p["citation"]) for p in passages},
         "themes_evenements": {e["id"]: themes_de(" ".join(filter(None, [e.get("titre"), e.get("citation")])))
                               for e in evenements},
