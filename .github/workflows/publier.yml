@@ -27,7 +27,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Installer la lecture des PDF
-        run: sudo apt-get install -y --no-install-recommends poppler-utils
+        # Facultatif : sans pdftotext, seules les pages en PDF sont ignorées.
+        continue-on-error: true
+        run: sudo apt-get update -q && sudo apt-get install -y --no-install-recommends poppler-utils
       - name: Capturer les pages suivies
         run: python capture/capture.py
       - name: Fonctions (Wikidata) et vérifications publiées (Google Fact Check, si une clé est fournie)
