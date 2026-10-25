@@ -72,7 +72,7 @@ function basculerSuivi(id) {
 const donnees = {};
 
 async function charger() {
-  const noms = ["candidats", "evenements", "calendrier", "sources", "veille"];
+  const noms = ["candidats", "evenements", "calendrier", "sources", "veille", "auto"];
   const res = await Promise.all(
     noms.map((n) =>
       fetch(`data/${n}.json`, { cache: "no-cache" })
@@ -154,6 +154,23 @@ function prochainRendezVous() {
   return (donnees.calendrier?.dates || []).find((d) => d.date && dateDe(d.date) >= new Date(auj.toDateString()));
 }
 
+function cartePassage(p, avecCandidat = true) {
+  const cand = donnees.candidatsParId[p.candidat];
+  const ajout = p.sens === "ajout";
+  const archives = [
+    `<a href="${echapper(p.url)}" rel="noopener" target="_blank">Page officielle</a>`,
+    `<a href="${echapper(ajout ? p.archive_apres : p.archive_avant)}" rel="noopener" target="_blank">Texte archivé</a>`,
+    (ajout ? p.wayback_apres : p.wayback_avant) ? `<a href="${echapper(ajout ? p.wayback_apres : p.wayback_avant)}" rel="noopener" target="_blank">Internet Archive</a>` : "",
+  ].filter(Boolean);
+  return `<article class="carte carte-auto">
+    <p class="carte-haut"><span class="type">${ajout ? "Ajouté sur la page officielle" : "Retiré de la page officielle"}</span>${avecCandidat && cand ? `<span class="qui"><a href="#/candidat/${cand.id}">${echapper(nomComplet(cand))}</a></span>` : ""}<time datetime="${echapper(p.date)}">${formaterDate(p.date)}</time></p>
+    <h3>${echapper(p.libelle)}</h3>
+    <blockquote class="${ajout ? "" : "barre"}">« ${echapper(p.citation)} »</blockquote>
+    <p class="sources"><span class="sources-titre">Preuve</span> ${archives.join('<span class="sep">·</span>')}</p>
+    <p class="auto-mention">Publication automatique : citation exacte de la page, sans reformulation ni relecture.${p.tronquee ? " Passage abrégé." : ""}</p>
+  </article>`;
+}
+
 // ---------- Vues ----------
 
 function vueReleve() {
@@ -179,11 +196,19 @@ function vueReleve() {
   const retenus = evenements
     .filter((e) => concerne(e.candidats) && dansPeriode(e))
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const passagesRetenus = (donnees.auto?.passages || []).filter(
+    (p) => concerne([p.candidat]) && (!depuis || new Date(p.date) > depuis)
+  );
   const veilleRetenue = changements.filter(
     (c) => concerne([c.candidat]) && (!depuis || new Date(c.date) > depuis)
   );
 
-  const nb = retenus.length;
+  // Événements relus et passages automatiques, du plus récent au plus ancien.
+  const fil = [
+    ...retenus.map((e) => ({ date: e.date || "", html: () => carteEvenement(e) })),
+    ...passagesRetenus.map((p) => ({ date: p.date, html: () => cartePassage(p) })),
+  ].sort((a, b) => b.date.localeCompare(a.date));
+  const nb = fil.length;
   const titre = nb === 0 ? "Aucun changement" : nb === 1 ? "1 changement" : `${nb} changements`;
   const portee = suivis.length
     ? `sur ${suivis.length === 1 ? "le candidat que vous suivez" : `les ${suivis.length} candidats que vous suivez`}`
@@ -193,23 +218,23 @@ function vueReleve() {
     .map(([v, l]) => `<button class="puce${v === periode ? " actif" : ""}" data-periode="${v}" aria-pressed="${v === periode}">${l}</button>`)
     .join("");
 
-  const cartes = retenus
-    .map((e) => {
-      const noms = e.candidats.map((id) => donnees.candidatsParId[id]).filter(Boolean);
-      const qui = noms.map((c) => `<a href="#/candidat/${c.id}">${echapper(nomComplet(c))}</a>`).join(", ");
-      return `<article class="carte">
-        <p class="carte-haut"><span class="type">${echapper(LIBELLES_EVENEMENT[e.type] || e.type)}</span>${qui ? `<span class="qui">${qui}</span>` : ""}<time datetime="${echapper(e.date)}">${formaterDate(e.date, e.precision)}</time></p>
-        <h3>${echapper(e.titre)}</h3>
-        ${e.citation ? `<blockquote>« ${echapper(e.citation)} »</blockquote>` : ""}
-        ${e.detail ? `<p class="detail">${echapper(e.detail)}</p>` : ""}
-        ${ligneSources(e.sources)}
-      </article>`;
-    })
-    .join("");
+  const cartes = fil.map((x) => x.html()).join("");
+
+  function carteEvenement(e) {
+    const noms = e.candidats.map((id) => donnees.candidatsParId[id]).filter(Boolean);
+    const qui = noms.map((c) => `<a href="#/candidat/${c.id}">${echapper(nomComplet(c))}</a>`).join(", ");
+    return `<article class="carte">
+      <p class="carte-haut"><span class="type">${echapper(LIBELLES_EVENEMENT[e.type] || e.type)}</span>${qui ? `<span class="qui">${qui}</span>` : ""}<time datetime="${echapper(e.date)}">${formaterDate(e.date, e.precision)}</time></p>
+      <h3>${echapper(e.titre)}</h3>
+      ${e.citation ? `<blockquote>« ${echapper(e.citation)} »</blockquote>` : ""}
+      ${e.detail ? `<p class="detail">${echapper(e.detail)}</p>` : ""}
+      ${ligneSources(e.sources)}
+    </article>`;
+  }
 
   const rdv = prochainRendezVous();
   const blocVeille = veilleRetenue.length
-    ? `<a class="encart" href="#/veille"><strong>${veilleRetenue.length} modification${veilleRetenue.length > 1 ? "s" : ""} détectée${veilleRetenue.length > 1 ? "s" : ""}</strong> sur les pages officielles suivies, pas encore relue${veilleRetenue.length > 1 ? "s" : ""}. Voir la veille</a>`
+    ? `<a class="encart" href="#/veille"><strong>${veilleRetenue.length} modification${veilleRetenue.length > 1 ? "s" : ""} détectée${veilleRetenue.length > 1 ? "s" : ""}</strong> sur les pages officielles suivies, y compris menus et actualités. Voir la veille</a>`
     : "";
 
   return `
@@ -276,6 +301,7 @@ function vueCandidat(id) {
   const evenements = (donnees.evenements?.evenements || [])
     .filter((e) => e.candidats.includes(id))
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const passagesCandidat = (donnees.auto?.passages || []).filter((p) => p.candidat === id).reverse().slice(0, 20);
   const pagesVeille = Object.fromEntries((donnees.veille?.pages || []).map((p) => [p.id, p]));
   const pages = c.pages_suivies
     .map((pid) => {
@@ -310,10 +336,10 @@ function vueCandidat(id) {
         <p class="source-meta">Aucune candidature n'est officielle avant la publication de la liste par le Conseil constitutionnel.</p>
       </div>
 
-      <h2>Propositions</h2>
-      <div class="bloc">
-        <p>Aucune proposition relue n'est encore publiée pour ${echapper(nomComplet(c))}. Chaque proposition sera ajoutée avec la phrase exacte, sa date et une source primaire archivée, après relecture.</p>
-      </div>
+      <h2>Changements sur ses pages officielles</h2>
+      ${passagesCandidat.length
+        ? passagesCandidat.map((p) => cartePassage(p, false)).join("")
+        : `<p class="vide">Aucun passage ajouté ou retiré depuis le début de la capture.${c.pages_suivies.length ? "" : " Aucune page officielle n'est suivie pour l'instant."}</p>`}
 
       <h2>Historique</h2>
       ${evenements.length
@@ -368,7 +394,7 @@ function vueVeille() {
         ...c.extraits_retires.map((x) => `<li class="retrait"><span aria-label="Retiré">−</span> ${echapper(x)}</li>`),
       ].join("");
       return `<article class="carte carte-veille">
-        <p class="carte-haut"><span class="type">Page modifiée · non relue</span>${cand ? `<span class="qui"><a href="#/candidat/${cand.id}">${echapper(nomComplet(cand))}</a></span>` : ""}<time>${formaterHorodatage(c.date)}</time></p>
+        <p class="carte-haut"><span class="type">Page modifiée</span>${cand ? `<span class="qui"><a href="#/candidat/${cand.id}">${echapper(nomComplet(cand))}</a></span>` : ""}<time>${formaterHorodatage(c.date)}</time></p>
         <h3><a href="${echapper(c.url)}" rel="noopener" target="_blank">${echapper(c.libelle)}</a></h3>
         <p class="source-meta">${c.lignes_ajoutees} ligne${c.lignes_ajoutees > 1 ? "s" : ""} ajoutée${c.lignes_ajoutees > 1 ? "s" : ""}, ${c.lignes_retirees} retirée${c.lignes_retirees > 1 ? "s" : ""}. Premiers extraits :</p>
         <ul class="diff">${extraits}</ul>
@@ -385,7 +411,7 @@ function vueVeille() {
   return `
     <section>
       <h1>Veille des pages officielles</h1>
-      <p class="chapeau">Chaque jour, Relevé capture le texte des pages officielles suivies et archive toute nouvelle version. Les modifications ci-dessous sont détectées automatiquement et <strong>n'ont pas encore été relues</strong> : ce sont des différences de texte, pas des changements de position.</p>
+      <p class="chapeau">Chaque jour, Relevé capture le texte des pages officielles suivies et archive toute nouvelle version. Ci-dessous, toutes les différences de texte brutes, menus et actualités compris. Sur les pages de programme, les phrases de contenu ajoutées ou retirées sont aussi publiées dans le relevé, telles quelles. Une différence de texte n'est pas un changement de position.</p>
       <p class="source-meta">Dernière capture : ${v.maj ? formaterHorodatage(v.maj) : "pas encore effectuée"}.</p>
       ${cartes || `<p class="vide">Aucune modification détectée pour l'instant. L'historique commence à la première capture.</p>`}
       <h2>Pages suivies</h2>
@@ -406,7 +432,7 @@ function vueMethode() {
       <ul>
         <li>Des événements datés (candidatures, investitures, calendrier), chacun avec au moins une source et sa date.</li>
         <li>Des propositions uniquement avec la phrase exacte, entre guillemets, sa date et au moins une source primaire archivée. À défaut de source primaire, la proposition porte la mention « rapportée par la presse ».</li>
-        <li>Une veille automatique des pages officielles, présentée comme non relue.</li>
+        <li>Chaque jour, de façon automatique, les phrases ajoutées ou retirées sur les pages de programme officielles, copiées mot pour mot, avec la page et le texte archivé avant et après.</li>
       </ul>
 
       <h2>Ce que Relevé ne fait pas</h2>
@@ -415,7 +441,7 @@ function vueMethode() {
         <li>Pas de sondages.</li>
         <li>Pas de reformulation entre guillemets, pas de « contradiction » automatique : on écrit « évolution documentée » et on montre les deux versions datées.</li>
         <li>Pas de couleurs de parti.</li>
-        <li>Aucun texte publié sans relecture humaine.</li>
+        <li>Aucun texte rédigé, résumé ou interprété automatiquement : la partie automatique ne publie que des citations exactes.</li>
       </ul>
 
       <h2>Hiérarchie des sources</h2>
@@ -433,10 +459,11 @@ function vueMethode() {
       <p>Les procédures judiciaires sont décrites par leur stade (mise en examen, condamnation non définitive, définitive) et leur source.</p>
 
       <h2>Veille et archives</h2>
-      <p>Les pages officielles suivies sont capturées chaque jour. Relevé respecte les règles d'accès des sites (robots.txt), garde une copie du texte et demande une copie publique à Internet Archive. Une différence de texte n'est jamais présentée comme un changement de position avant relecture.</p>
+      <p>Les pages officielles suivies sont capturées chaque jour. Relevé respecte les règles d'accès des sites (robots.txt), garde une copie du texte et demande une copie publique à Internet Archive.</p>
+      <p>Sur les pages de programme, Relevé publie sans relecture les phrases réellement ajoutées ou retirées. Un filtre écarte les menus, boutons, dates isolées et textes communs à tout le site ; un simple déplacement de paragraphe n'est pas compté. Ces cartes sont marquées « publication automatique ». Elles disent ce que la page affiche, pas ce que le candidat pense : une phrase retirée d'une page n'est pas forcément un renoncement. Les pages d'accueil et les agendas restent dans la veille, sans carte.</p>
 
       <h2>Erreurs et corrections</h2>
-      <p>Chaque fiche a un lien « Signaler une erreur ». Les corrections sont faites dans les données publiques du projet, dont l'historique complet est consultable : <a href="${DEPOT}/commits/main">journal des modifications</a>.</p>
+      <p>Chaque fiche a un lien « Signaler une erreur ». Une carte automatique erronée (bruit, mauvaise page) est retirée sur signalement. Les corrections sont faites dans les données publiques du projet, dont l'historique complet est consultable : <a href="${DEPOT}/commits/main">journal des modifications</a>.</p>
 
       <h2>Vos données</h2>
       <p>Pas de compte, pas de cookie, pas de mesure d'audience, pas de publicité. Les candidats que vous suivez et la date de votre dernière visite sont stockés uniquement dans ce navigateur. Rien n'est envoyé à un serveur. <a href="#/suivis">Voir ou effacer mes données</a>.</p>

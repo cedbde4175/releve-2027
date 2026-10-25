@@ -4,109 +4,127 @@
    "id": "rn-accueil",
    "candidat": "le-pen",
    "url": "https://rassemblementnational.fr/",
-   "libelle": "Rassemblement national, page d'accueil"
+   "libelle": "Rassemblement national, page d'accueil",
+   "auto": false
   },
   {
    "id": "lfi-programme",
    "candidat": "melenchon",
    "url": "https://melenchon2027.fr/programme/decouvrir/",
-   "libelle": "Mélenchon 2027, « Découvrir le programme »"
+   "libelle": "Mélenchon 2027, « Découvrir le programme »",
+   "auto": true
   },
   {
    "id": "lfi-aec",
    "candidat": "melenchon",
    "url": "https://programme.lafranceinsoumise.fr/",
-   "libelle": "La France insoumise, site du programme"
+   "libelle": "La France insoumise, site du programme",
+   "auto": false
   },
   {
    "id": "hor-manifeste",
    "candidat": "philippe",
    "url": "https://horizonsleparti.fr/le-manifeste/",
-   "libelle": "Horizons, le manifeste"
+   "libelle": "Horizons, le manifeste",
+   "auto": true
   },
   {
    "id": "hor-narco",
    "candidat": "philippe",
    "url": "https://horizonsleparti.fr/le-plan-dedouard-philippe-contre-le-narcotrafic/",
-   "libelle": "Horizons, plan contre le narcotrafic"
+   "libelle": "Horizons, plan contre le narcotrafic",
+   "auto": true
   },
   {
    "id": "attal-programme",
    "candidat": "attal",
    "url": "https://attalpresident.fr/programme",
-   "libelle": "Attal Président, programme"
+   "libelle": "Attal Président, programme",
+   "auto": true
   },
   {
    "id": "attal-education",
    "candidat": "attal",
    "url": "https://attalpresident.fr/programme/education",
-   "libelle": "Attal Président, éducation"
+   "libelle": "Attal Président, éducation",
+   "auto": true
   },
   {
    "id": "attal-travail",
    "candidat": "attal",
    "url": "https://attalpresident.fr/programme/travail-salaires",
-   "libelle": "Attal Président, travail et salaires"
+   "libelle": "Attal Président, travail et salaires",
+   "auto": true
   },
   {
    "id": "attal-frontieres",
    "candidat": "attal",
    "url": "https://attalpresident.fr/programme/frontieres",
-   "libelle": "Attal Président, frontières"
+   "libelle": "Attal Président, frontières",
+   "auto": true
   },
   {
    "id": "attal-ia",
    "candidat": "attal",
    "url": "https://attalpresident.fr/programme/intelligence-artificielle",
-   "libelle": "Attal Président, intelligence artificielle"
+   "libelle": "Attal Président, intelligence artificielle",
+   "auto": true
   },
   {
    "id": "attal-dette",
    "candidat": "attal",
    "url": "https://attalpresident.fr/programme/dette-de-letat",
-   "libelle": "Attal Président, dette de l'État"
+   "libelle": "Attal Président, dette de l'État",
+   "auto": true
   },
   {
    "id": "attal-dette-eco",
    "candidat": "attal",
    "url": "https://attalpresident.fr/programme/dette-ecologique",
-   "libelle": "Attal Président, dette écologique"
+   "libelle": "Attal Président, dette écologique",
+   "auto": true
   },
   {
    "id": "lr-propositions",
    "candidat": "retailleau",
    "url": "https://republicains.fr/nos-propositions/",
-   "libelle": "Les Républicains, nos propositions"
+   "libelle": "Les Républicains, nos propositions",
+   "auto": true
   },
   {
    "id": "eco-projet",
    "candidat": "tondelier",
    "url": "https://lesecologistes.fr/share/page/6ImK65GKUnvibm33WGkjkj/projet",
-   "libelle": "Les Écologistes, projet 2027"
+   "libelle": "Les Écologistes, projet 2027",
+   "auto": true
   },
   {
    "id": "pcf-programme",
    "candidat": "roussel",
    "url": "https://www.pcf.fr/le_programme",
-   "libelle": "PCF, le programme"
+   "libelle": "PCF, le programme",
+   "auto": true
   },
   {
    "id": "rec-programme",
    "candidat": "zemmour",
    "url": "https://leprogrammepourlafrance.fr/",
-   "libelle": "Reconquête, « Le Programme pour la France »"
+   "libelle": "Reconquête, « Le Programme pour la France »",
+   "auto": false
   },
   {
    "id": "pp-projet",
    "candidat": "glucksmann",
    "url": "https://place-publique.eu/pages/69jA2SKIG5udlNX7wI3dmc/le-projet",
-   "libelle": "Place publique, le projet"
+   "libelle": "Place publique, le projet",
+   "auto": true
   },
   {
    "id": "glucks-accueil",
    "candidat": "glucksmann",
    "url": "https://glucks2027.fr/",
-   "libelle": "Glucksmann 2027, page d'accueil"
+   "libelle": "Glucksmann 2027, page d'accueil",
+   "auto": false
   }
  ]
 }

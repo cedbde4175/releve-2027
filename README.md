@@ -8,8 +8,10 @@ Site : https://cedbde4175.github.io/releve-2027/
 
 - Le registre est public et statique : des fichiers JSON dans `site/data/`.
 - La personnalisation (candidats suivis, date de dernière visite) se calcule dans le navigateur et reste sur l'appareil.
-- Chaque jour, GitHub Actions capture le texte des pages officielles suivies, archive toute nouvelle version (`archive/`), demande une copie à Internet Archive et ouvre un ticket « relecture » si une page a changé.
-- Rien n'est publié comme proposition sans relecture humaine, avec la phrase exacte, sa date et une source primaire.
+- Chaque jour, GitHub Actions capture le texte des pages officielles suivies, archive toute nouvelle version (`archive/`) et demande une copie à Internet Archive.
+- Sur les pages marquées `"auto": true` dans `capture/pages.json` (pages de programme), les phrases de contenu ajoutées ou retirées sont publiées sans relecture dans `site/data/auto.json` : citations exactes, jamais reformulées, avec le texte archivé avant et après. Menus, boutons, lignes communes au site et simples déplacements sont filtrés.
+- Les pages d'accueil et agendas (`"auto": false`) restent dans la veille brute, sans carte dans le relevé.
+- Aucun texte n'est rédigé ou résumé automatiquement. Les statuts de candidature (`candidats.json`, `evenements.json`) restent mis à jour à la main.
 
 ## Arborescence
 
@@ -20,7 +22,8 @@ Site : https://cedbde4175.github.io/releve-2027/
 | `site/data/evenements.json` | Événements relus qui alimentent le relevé. |
 | `site/data/calendrier.json` | Dates de l'élection et leur niveau de certitude. |
 | `site/data/sources.json` | Sources citées (éditeur, type, dates de publication et de consultation). |
-| `site/data/veille.json` | Généré par la capture : état des pages et modifications détectées. |
+| `site/data/veille.json` | Généré par la capture : état des pages et différences brutes. |
+| `site/data/auto.json` | Généré par la capture : passages ajoutés ou retirés, publiés automatiquement. |
 | `capture/pages.json` | Liste des pages officielles suivies. |
 | `capture/capture.py` | Script de capture (bibliothèque standard Python). |
 | `archive/` | Textes capturés, une version par changement. |
