@@ -1,20 +1,20 @@
 {
- "maj": "2026-10-25T09:49:24+00:00",
+ "maj": "2026-10-26T05:55:10+00:00",
  "candidats": {
   "le-pen": {
    "wikidata": "Q12927",
    "fonctions": [
     {
-     "poste": "Q3044918",
+     "poste": "Q59557640",
      "debut": "2024-07-01",
      "fin": null,
-     "intitule": "député français"
+     "intitule": "député du Pas-de-Calais"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59557640",
      "debut": "2022-06-22",
      "fin": "2024-06-09",
-     "intitule": "député français"
+     "intitule": "député du Pas-de-Calais"
     },
     {
      "poste": "Q63758845",
@@ -23,10 +23,10 @@
      "intitule": "conseiller départemental du Pas-de-Calais"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59557640",
      "debut": "2017-06-21",
      "fin": "2022-06-21",
-     "intitule": "député français"
+     "intitule": "député du Pas-de-Calais"
     },
     {
      "poste": "Q62274430",
@@ -93,10 +93,10 @@
    "wikidata": "Q5829",
    "fonctions": [
     {
-     "poste": "Q3044918",
+     "poste": "Q59661788",
      "debut": "2017-06-21",
      "fin": "2022-06-21",
-     "intitule": "député français"
+     "intitule": "député des Bouches-du-Rhône"
     },
     {
      "poste": "Q27169",
@@ -149,17 +149,114 @@
    ]
   },
   "philippe": {
-   "wikidata": null,
-   "fonctions": []
+   "wikidata": "Q3579995",
+   "fonctions": [
+    {
+     "poste": "Q62083778",
+     "debut": "2026-03-28",
+     "fin": null,
+     "intitule": "maire du Havre"
+    },
+    {
+     "poste": "Q65493280",
+     "debut": "2026-03-22",
+     "fin": null,
+     "intitule": "conseiller municipal du Havre"
+    },
+    {
+     "poste": "Q55168644",
+     "debut": "2020-10-27",
+     "fin": null,
+     "intitule": "membre du conseil d'administration"
+    },
+    {
+     "poste": "Q62083778",
+     "debut": "2020-07-05",
+     "fin": "2026-03-28",
+     "intitule": "maire du Havre"
+    },
+    {
+     "poste": "Q65493280",
+     "debut": "2020-06-28",
+     "fin": "2026-03-22",
+     "intitule": "conseiller municipal du Havre"
+    },
+    {
+     "poste": "Q20203006",
+     "debut": "2017-10-03",
+     "fin": "2017-10-16",
+     "intitule": "ministre de l'Intérieur"
+    },
+    {
+     "poste": "Q1587677",
+     "debut": "2017-05-15",
+     "fin": "2020-07-03",
+     "intitule": "Premier ministre français"
+    },
+    {
+     "poste": "Q62083778",
+     "debut": "2014-03-29",
+     "fin": "2017-05-21",
+     "intitule": "maire du Havre"
+    },
+    {
+     "poste": "Q66501297",
+     "debut": "2014-03-23",
+     "fin": null,
+     "intitule": "conseiller communautaire de l'agglomération havraise"
+    },
+    {
+     "poste": "Q59497128",
+     "debut": "2012-06-20",
+     "fin": "2017-06-15",
+     "intitule": "député de la Seine-Maritime"
+    },
+    {
+     "poste": "Q59497128",
+     "debut": "2012-03-23",
+     "fin": "2012-06-19",
+     "intitule": "député de la Seine-Maritime"
+    },
+    {
+     "poste": "Q62083778",
+     "debut": "2010-10-24",
+     "fin": "2014-03-29",
+     "intitule": "maire du Havre"
+    },
+    {
+     "poste": "Q30461",
+     "debut": "2010",
+     "fin": "2017-06-25",
+     "intitule": "président ou présidente"
+    },
+    {
+     "poste": "Q3780304",
+     "debut": "2008-03-17",
+     "fin": "2012-04-22",
+     "intitule": "conseiller général"
+    },
+    {
+     "poste": "Q16886136",
+     "debut": "2004-03-29",
+     "fin": "2008-03-18",
+     "intitule": "conseiller régional"
+    },
+    {
+     "poste": "Q65493280",
+     "debut": null,
+     "fin": null,
+     "intitule": "conseiller municipal du Havre"
+    }
+   ]
   },
   "attal": {
    "wikidata": "Q30339350",
    "fonctions": [
     {
-     "poste": "Q3044918",
+     "poste": "Q67201569",
      "debut": "2024-07-08",
      "fin": null,
-     "intitule": "député français"
+     "intitule": "député des Hauts-de-Seine"
     },
     {
      "poste": "Q1587677",
@@ -174,10 +271,10 @@
      "intitule": "ministre de l'Éducation nationale"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201569",
      "debut": "2022-06-22",
      "fin": "2022-07-22",
-     "intitule": "député français"
+     "intitule": "député des Hauts-de-Seine"
     },
     {
      "poste": "Q107659488",
@@ -192,10 +289,10 @@
      "intitule": "porte-parole du gouvernement"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201569",
      "debut": "2017-06-21",
      "fin": "2018-11-16",
-     "intitule": "député français"
+     "intitule": "député des Hauts-de-Seine"
     }
    ]
   },
@@ -263,10 +360,10 @@
      "intitule": "conseiller régional des Pays de la Loire"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59771232",
      "debut": "1994-11-27",
      "fin": "1997-04-21",
-     "intitule": "député français"
+     "intitule": "député de la Vendée"
     },
     {
      "poste": "Q3780304",
@@ -315,10 +412,10 @@
      "intitule": "maire de Saint-Amand-les-Eaux"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59554365",
      "debut": "2022-06-22",
      "fin": "2024-06-09",
-     "intitule": "député français"
+     "intitule": "député du Nord"
     },
     {
      "poste": "Q65518084",
@@ -327,10 +424,10 @@
      "intitule": "conseiller municipal de Saint-Amand-les-Eaux"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59554365",
      "debut": "2017-06-21",
      "fin": "2022-06-21",
-     "intitule": "député français"
+     "intitule": "député du Nord"
     },
     {
      "poste": "Q65518084",
@@ -417,29 +514,108 @@
    ]
   },
   "bertrand": {
-   "wikidata": null,
-   "fonctions": []
+   "wikidata": "Q203793",
+   "fonctions": [
+    {
+     "poste": "Q66499388",
+     "debut": "2017-01-16",
+     "fin": null,
+     "intitule": "conseiller communautaire de l'Agglo du Saint-Quentinois"
+    },
+    {
+     "poste": "Q62084747",
+     "debut": "2016-01-04",
+     "fin": null,
+     "intitule": "président du conseil régional des Hauts-de-France"
+    },
+    {
+     "poste": "Q62274430",
+     "debut": "2016-01-01",
+     "fin": null,
+     "intitule": "conseiller régional des Hauts-de-France"
+    },
+    {
+     "poste": "Q59240573",
+     "debut": "2012-06-20",
+     "fin": "2016-01-12",
+     "intitule": "député de l'Aisne"
+    },
+    {
+     "poste": "Q59240573",
+     "debut": "2012-06-17",
+     "fin": "2012-06-19",
+     "intitule": "député de l'Aisne"
+    },
+    {
+     "poste": "Q105445328",
+     "debut": "2010-11-14",
+     "fin": "2012-05-10",
+     "intitule": "ministre du Travail"
+    },
+    {
+     "poste": "Q62586785",
+     "debut": "2010-10-04",
+     "fin": "2016-01-14",
+     "intitule": "maire de Saint-Quentin"
+    },
+    {
+     "poste": "Q59240573",
+     "debut": "2009-02-15",
+     "fin": "2010-12-15",
+     "intitule": "député de l'Aisne"
+    },
+    {
+     "poste": "Q59240573",
+     "debut": "2007-06-20",
+     "fin": "2007-07-19",
+     "intitule": "député de l'Aisne"
+    },
+    {
+     "poste": "Q105445328",
+     "debut": "2007-05-18",
+     "fin": "2009-01-15",
+     "intitule": "ministre du Travail"
+    },
+    {
+     "poste": "Q107658508",
+     "debut": "2005-06-02",
+     "fin": "2007-03-26",
+     "intitule": "ministre de la Santé"
+    },
+    {
+     "poste": "Q59240573",
+     "debut": "2002-06-19",
+     "fin": "2004-04-30",
+     "intitule": "député de l'Aisne"
+    },
+    {
+     "poste": "Q65521700",
+     "debut": null,
+     "fin": null,
+     "intitule": "conseiller municipal de Saint-Quentin"
+    }
+   ]
   },
   "ruffin": {
    "wikidata": "Q3085763",
    "fonctions": [
     {
-     "poste": "Q3044918",
+     "poste": "Q59557779",
      "debut": "2024-07-08",
      "fin": null,
-     "intitule": "député français"
+     "intitule": "député de la Somme"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59557779",
      "debut": "2022-06-22",
      "fin": "2024-06-09",
-     "intitule": "député français"
+     "intitule": "député de la Somme"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59557779",
      "debut": "2017-06-21",
      "fin": "2022-06-21",
-     "intitule": "député français"
+     "intitule": "député de la Somme"
     }
    ]
   },
@@ -447,40 +623,40 @@
    "wikidata": "Q291385",
    "fonctions": [
     {
-     "poste": "Q3044918",
+     "poste": "Q59604209",
      "debut": "2024-07-08",
      "fin": null,
-     "intitule": "député français"
+     "intitule": "député des Deux-Sèvres"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59604209",
      "debut": "2022-06-22",
      "fin": "2024-06-09",
-     "intitule": "député français"
+     "intitule": "député des Deux-Sèvres"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59604209",
      "debut": "2017-06-21",
      "fin": "2022-06-21",
-     "intitule": "député français"
+     "intitule": "député des Deux-Sèvres"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59604209",
      "debut": "2013-08-03",
      "fin": "2017-06-20",
-     "intitule": "député français"
+     "intitule": "député des Deux-Sèvres"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59604209",
      "debut": "2012-06-20",
      "fin": "2012-07-21",
-     "intitule": "député français"
+     "intitule": "député des Deux-Sèvres"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q59604209",
      "debut": "2007-06-20",
      "fin": "2012-06-16",
-     "intitule": "député français"
+     "intitule": "député des Deux-Sèvres"
     },
     {
      "poste": "Q30461",
@@ -570,40 +746,40 @@
      "intitule": "conseiller municipal de Yerres"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201539",
      "debut": "2022-06-22",
      "fin": "2024-06-09",
-     "intitule": "député français"
+     "intitule": "député de l'Essonne"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201539",
      "debut": "2017-06-21",
      "fin": "2022-06-21",
-     "intitule": "député français"
+     "intitule": "député de l'Essonne"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201539",
      "debut": "2012-06-20",
      "fin": "2017-06-20",
-     "intitule": "député français"
+     "intitule": "député de l'Essonne"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201539",
      "debut": "2007-06-20",
      "fin": "2012-06-19",
-     "intitule": "député français"
+     "intitule": "député de l'Essonne"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201539",
      "debut": "2002-06-19",
      "fin": "2007-06-19",
-     "intitule": "député français"
+     "intitule": "député de l'Essonne"
     },
     {
-     "poste": "Q3044918",
+     "poste": "Q67201539",
      "debut": "1997-06-01",
      "fin": "2002-06-18",
-     "intitule": "député français"
+     "intitule": "député de l'Essonne"
     },
     {
      "poste": "Q61958695",
