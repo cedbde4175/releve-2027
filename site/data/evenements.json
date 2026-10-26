@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-24",
+ "maj": "2026-10-26",
  "evenements": [
   {
    "id": "2024-09-philippe",
@@ -48,6 +48,23 @@
     "ps-decompte"
    ],
    "ajoute_le": "2026-10-24"
+  },
+  {
+   "id": "2026-04-28-cazeneuve",
+   "date": "2026-04-28",
+   "precision": "jour",
+   "type": "intention",
+   "candidats": [
+    "cazeneuve"
+   ],
+   "titre": "Bernard Cazeneuve se dit candidat dans un entretien au Figaro, selon Europe 1",
+   "detail": "LCP et Public Sénat le présentent en octobre 2026 comme candidat pressenti, sans déclaration formelle.",
+   "sources": [
+    "europe1-cazeneuve",
+    "lcp-liste",
+    "ps-candidats"
+   ],
+   "ajoute_le": "2026-10-26"
   },
   {
    "id": "2026-05-03-melenchon",
@@ -160,6 +177,23 @@
    "ajoute_le": "2026-10-24"
   },
   {
+   "id": "2026-09-24-becht",
+   "date": "2026-09-24",
+   "precision": "jour",
+   "type": "candidature",
+   "candidats": [
+    "becht"
+   ],
+   "titre": "Olivier Becht annonce sa candidature",
+   "detail": "Il dit vouloir représenter « l'extrême-centre » selon Public Sénat.",
+   "sources": [
+    "lcp-liste",
+    "sudradio-becht",
+    "ps-candidats"
+   ],
+   "ajoute_le": "2026-10-26"
+  },
+  {
    "id": "2026-10-11-glucksmann",
    "date": "2026-10-11",
    "precision": "jour",
@@ -179,14 +213,34 @@
    "id": "2026-10-14-polony",
    "date": "2026-10-14",
    "precision": "jour",
-   "type": "intention",
-   "candidats": [],
-   "titre": "Natacha Polony annonce sur France Inter qu'elle sera candidate",
-   "detail": "Une seule source consultée : pas encore de fiche (règle des deux médias).",
-   "sources": [
-    "tle-candidats"
+   "type": "candidature",
+   "candidats": [
+    "polony"
    ],
-   "ajoute_le": "2026-10-24"
+   "titre": "Natacha Polony annonce sa candidature sur France Inter",
+   "detail": "Elle porte le mouvement « Nous sommes la France » selon Euronews.",
+   "sources": [
+    "lcp-polony",
+    "ps-candidats",
+    "euronews-polony"
+   ],
+   "ajoute_le": "2026-10-26"
+  },
+  {
+   "id": "markovic-candidature",
+   "date": null,
+   "precision": null,
+   "type": "candidature",
+   "candidats": [
+    "markovic"
+   ],
+   "titre": "Mira Markovic (Parti animaliste) comptée parmi les candidats déclarés par deux médias",
+   "detail": "Date de déclaration non précisée par les sources consultées.",
+   "sources": [
+    "tle-candidats",
+    "ps-candidats"
+   ],
+   "ajoute_le": "2026-10-26"
   }
  ]
 }

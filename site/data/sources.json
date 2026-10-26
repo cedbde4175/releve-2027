@@ -1,5 +1,5 @@
 {
-  "maj": "2026-10-24",
+  "maj": "2026-10-26",
   "sources": [
     {
       "id": "tle-candidats",
@@ -8,7 +8,7 @@
       "titre": "Présidentielle 2027 : qui sont les candidats déjà déclarés ?",
       "url": "https://www.touteleurope.eu/vie-politique-des-etats-membres/presidentielle-2027-qui-sont-les-candidats-deja-declares/",
       "date_publication": "2026-10-14",
-      "date_consultation": "2026-10-24"
+      "date_consultation": "2026-10-26"
     },
     {
       "id": "ps-decompte",
@@ -26,7 +26,7 @@
       "titre": "Élection présidentielle 2027 : qui sont les candidats déclarés (ou presque) ?",
       "url": "https://www.publicsenat.fr/actualites/politique/election-presidentielle-2027-qui-sont-les-candidats-declares-ou-presque",
       "date_publication": "2026-10-14",
-      "date_consultation": "2026-10-24"
+      "date_consultation": "2026-10-26"
     },
     {
       "id": "lcp-primaire",
@@ -81,6 +81,51 @@
       "url": "https://www.lemondedudroit.fr/public/282-droit-public-general/104968-presidentielle-2027-calendrier-electoral.html",
       "date_publication": "2026-07-03",
       "date_consultation": "2026-10-24"
+    },
+    {
+      "id": "lcp-polony",
+      "editeur": "LCP",
+      "type": "presse",
+      "titre": "Natacha Polony annonce sa candidature à l'élection présidentielle",
+      "url": "https://lcp.fr/actualites/natacha-polony-annonce-sa-candidature-a-l-election-presidentielle-443808",
+      "date_publication": "2026-10-14",
+      "date_consultation": "2026-10-26"
+    },
+    {
+      "id": "euronews-polony",
+      "editeur": "Euronews",
+      "type": "presse",
+      "titre": "France : Natacha Polony officialise sa candidature à la présidentielle",
+      "url": "https://fr.euronews.com/2026/10/14/france-natacha-polony-officialise-sa-candidature-a-la-presidentielle",
+      "date_publication": "2026-10-14",
+      "date_consultation": "2026-10-26"
+    },
+    {
+      "id": "sudradio-becht",
+      "editeur": "Sud Radio",
+      "type": "presse",
+      "titre": "Qui est Olivier Becht, cet ancien ministre qui se lance dans la course à la Présidentielle ?",
+      "url": "https://www.sudradio.fr/politique/qui-est-olivier-becht-cet-ancien-ministre-qui-se-lance-dans-la-course-a-lelysee",
+      "date_publication": "2026-10-08",
+      "date_consultation": "2026-10-26"
+    },
+    {
+      "id": "lcp-liste",
+      "editeur": "LCP",
+      "type": "presse",
+      "titre": "Présidentielle 2027: la liste des candidats déjà en lice et des prétendants",
+      "url": "https://lcp.fr/actualites/presidentielle-2027-la-liste-des-candidats-deja-en-lice-et-des-pretendants-436373",
+      "date_publication": "2026-10-14",
+      "date_consultation": "2026-10-26"
+    },
+    {
+      "id": "europe1-cazeneuve",
+      "editeur": "Europe 1",
+      "type": "presse",
+      "titre": "Présidentielle 2027 : Bernard Cazeneuve annonce sa candidature, le barrage à Jean-Luc Mélenchon se précise",
+      "url": "https://www.europe1.fr/politique/presidentielle-2027-bernard-cazeneuve-annonce-sa-candidature-le-barrage-a-jean-luc-melenchon-se-precise-929339",
+      "date_publication": "2026-04-29",
+      "date_consultation": "2026-10-26"
     }
   ]
 }

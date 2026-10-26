@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-24",
+ "maj": "2026-10-26",
  "regle": "Fiche minimale pour toute personne ayant déclaré sa candidature selon au moins deux médias nationaux. Aucune candidature n'est officielle avant la publication de la liste par le Conseil constitutionnel.",
  "candidats": [
   {
@@ -554,36 +554,92 @@
    },
    "note": null,
    "pages_suivies": []
+  },
+  {
+   "id": "polony",
+   "prenom": "Natacha",
+   "nom": "Polony",
+   "formation": "Nous sommes la France",
+   "formation_note": "mouvement, selon Euronews",
+   "statut": {
+    "code": "declaree",
+    "libelle": "Candidature annoncée le 14 octobre 2026 sur France Inter",
+    "date": "2026-10-14",
+    "precision": "jour",
+    "certitude": "sur",
+    "sources": [
+     "lcp-polony",
+     "ps-candidats",
+     "euronews-polony",
+     "tle-candidats"
+    ]
+   },
+   "note": "Aucune page officielle de programme vérifiée à ce jour : pas de capture.",
+   "pages_suivies": []
+  },
+  {
+   "id": "becht",
+   "prenom": "Olivier",
+   "nom": "Becht",
+   "formation": null,
+   "formation_note": null,
+   "statut": {
+    "code": "declaree",
+    "libelle": "Candidature annoncée le 24 septembre 2026",
+    "date": "2026-09-24",
+    "precision": "jour",
+    "certitude": "sur",
+    "sources": [
+     "lcp-liste",
+     "sudradio-becht",
+     "ps-candidats"
+    ]
+   },
+   "note": "Député apparenté Ensemble pour la République selon LCP ; Sud Radio indique qu'il n'appartient plus à aucun camp politique. Annonce faite à Paris Match selon Sud Radio. Aucune page officielle de programme vérifiée à ce jour : pas de capture.",
+   "pages_suivies": []
+  },
+  {
+   "id": "cazeneuve",
+   "prenom": "Bernard",
+   "nom": "Cazeneuve",
+   "formation": "La Convention",
+   "formation_note": null,
+   "statut": {
+    "code": "intention",
+    "libelle": "Candidature : sources divergentes",
+    "date": "2026-04-28",
+    "precision": "jour",
+    "certitude": "incertain",
+    "sources": [
+     "europe1-cazeneuve",
+     "tle-candidats",
+     "lcp-liste",
+     "ps-candidats"
+    ]
+   },
+   "note": "Europe 1 (29/04/2026) indique qu'il a annoncé sa candidature dans un entretien au Figaro le 28 avril 2026 ; Toute l'Europe le compte parmi les candidats déclarés. LCP (liste mise à jour le 14/10/2026) le classe parmi les prétendants et Public Sénat (14/10/2026) parle d'une candidature « pressentie ». Statut laissé « incertain ». Aucune page officielle de programme vérifiée à ce jour : pas de capture.",
+   "pages_suivies": []
+  },
+  {
+   "id": "markovic",
+   "prenom": "Mira",
+   "nom": "Markovic",
+   "formation": "Parti animaliste",
+   "formation_note": null,
+   "statut": {
+    "code": "declaree",
+    "libelle": "Candidature déclarée (date non précisée par les sources consultées)",
+    "date": null,
+    "precision": null,
+    "certitude": "sur",
+    "sources": [
+     "tle-candidats",
+     "ps-candidats"
+    ]
+   },
+   "note": "Aucune page officielle de programme vérifiée à ce jour : pas de capture.",
+   "pages_suivies": []
   }
  ],
- "en_attente_seconde_source": [
-  {
-   "nom": "Natacha Polony",
-   "texte": "A annoncé sa candidature sur France Inter le 14 octobre 2026",
-   "sources": [
-    "tle-candidats"
-   ]
-  },
-  {
-   "nom": "Bernard Cazeneuve",
-   "texte": "Candidature annoncée (La Convention), date non précisée",
-   "sources": [
-    "tle-candidats"
-   ]
-  },
-  {
-   "nom": "Olivier Becht",
-   "texte": "Candidature annoncée, date non précisée",
-   "sources": [
-    "tle-candidats"
-   ]
-  },
-  {
-   "nom": "Mira Markovic",
-   "texte": "Candidature déclarée (Parti animaliste), date non précisée",
-   "sources": [
-    "tle-candidats"
-   ]
-  }
- ]
+ "en_attente_seconde_source": []
 }
