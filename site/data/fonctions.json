@@ -1,5 +1,5 @@
 {
- "maj": "2026-10-26T05:55:10+00:00",
+ "maj": "2026-10-27T05:53:14+00:00",
  "candidats": {
   "le-pen": {
    "wikidata": "Q12927",
@@ -896,6 +896,139 @@
   },
   "lalanne": {
    "wikidata": "Q3081533",
+   "fonctions": []
+  },
+  "polony": {
+   "wikidata": "Q941949",
+   "fonctions": [
+    {
+     "poste": "Q3029423",
+     "debut": "2018",
+     "fin": "2024-12",
+     "intitule": "directeur ou directrice de la rédaction"
+    }
+   ]
+  },
+  "becht": {
+   "wikidata": "Q30348845",
+   "fonctions": [
+    {
+     "poste": "Q59693897",
+     "debut": "2024-07-08",
+     "fin": null,
+     "intitule": "député du Haut-Rhin"
+    },
+    {
+     "poste": "Q59693897",
+     "debut": "2024-02-12",
+     "fin": "2024-06-09",
+     "intitule": "député du Haut-Rhin"
+    },
+    {
+     "poste": "Q97061396",
+     "debut": "2022-07-04",
+     "fin": null,
+     "intitule": "ministre chargé du Commerce extérieur"
+    },
+    {
+     "poste": "Q59693897",
+     "debut": "2022-06-22",
+     "fin": "2022-08-04",
+     "intitule": "député du Haut-Rhin"
+    },
+    {
+     "poste": "Q65494714",
+     "debut": "2017-10-09",
+     "fin": null,
+     "intitule": "représentant à l'Assemblée parlementaire du Conseil de l'Europe"
+    },
+    {
+     "poste": "Q59693897",
+     "debut": "2017-06-21",
+     "fin": "2022-06-21",
+     "intitule": "député du Haut-Rhin"
+    },
+    {
+     "poste": "Q63758922",
+     "debut": "2015-04-02",
+     "fin": "2017-09-11",
+     "intitule": "conseiller départemental du Haut-Rhin"
+    },
+    {
+     "poste": "Q62585007",
+     "debut": "2008-03-15",
+     "fin": null,
+     "intitule": "maire de Rixheim"
+    }
+   ]
+  },
+  "cazeneuve": {
+   "wikidata": "Q560890",
+   "fonctions": [
+    {
+     "poste": "Q59616651",
+     "debut": "2017-06-16",
+     "fin": "2017-06-20",
+     "intitule": "député de la Manche"
+    },
+    {
+     "poste": "Q1587677",
+     "debut": "2016-12-06",
+     "fin": "2017-05-10",
+     "intitule": "Premier ministre français"
+    },
+    {
+     "poste": "Q20203006",
+     "debut": "2014-04-02",
+     "fin": "2016-12-06",
+     "intitule": "ministre de l'Intérieur"
+    },
+    {
+     "poste": "Q59616651",
+     "debut": "2012-06-20",
+     "fin": "2012-07-21",
+     "intitule": "député de la Manche"
+    },
+    {
+     "poste": "Q59616651",
+     "debut": "2007-06-20",
+     "fin": "2012-06-16",
+     "intitule": "député de la Manche"
+    },
+    {
+     "poste": "Q59616651",
+     "debut": "1997-06-12",
+     "fin": "2002-06-18",
+     "intitule": "député de la Manche"
+    },
+    {
+     "poste": "Q382617",
+     "debut": "1995-06-25",
+     "fin": "2000-03-14",
+     "intitule": "maire"
+    },
+    {
+     "poste": "Q16886136",
+     "debut": null,
+     "fin": null,
+     "intitule": "conseiller régional"
+    },
+    {
+     "poste": "Q3780304",
+     "debut": null,
+     "fin": null,
+     "intitule": "conseiller général"
+    },
+    {
+     "poste": "Q17221",
+     "debut": null,
+     "fin": null,
+     "intitule": "porte-parole"
+    }
+   ]
+  },
+  "markovic": {
+   "wikidata": null,
    "fonctions": []
   }
  }
