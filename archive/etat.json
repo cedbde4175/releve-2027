@@ -16,9 +16,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "lfi-aec": {
   "versions": [
@@ -86,9 +86,9 @@
     "wayback": "https://web.archive.org/web/20261031055205/https://melenchon2027.fr/"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "hor-manifeste": {
   "versions": [
@@ -100,9 +100,9 @@
     "wayback": "https://web.archive.org/web/20261025085627/https://horizonsleparti.fr/le-manifeste/"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "hor-narco": {
   "versions": [
@@ -121,9 +121,9 @@
     "wayback": "https://web.archive.org/web/20261030055831/https://horizonsleparti.fr/le-plan-dedouard-philippe-contre-le-narcotrafic/"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "attal-programme": {
   "versions": [
@@ -142,9 +142,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "attal-education": {
   "versions": [
@@ -163,9 +163,9 @@
     "wayback": "https://web.archive.org/web/20261031055553/https://attalpresident.fr/programme/education"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "attal-travail": {
   "versions": [
@@ -184,9 +184,9 @@
     "wayback": "https://web.archive.org/web/20261031055728/https://attalpresident.fr/programme/travail-salaires"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "attal-frontieres": {
   "versions": [
@@ -205,9 +205,9 @@
     "wayback": "https://web.archive.org/web/20261031060009/https://attalpresident.fr/programme/frontieres"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "attal-ia": {
   "versions": [
@@ -226,9 +226,9 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "attal-dette": {
   "versions": [
@@ -237,12 +237,12 @@
     "empreinte": "5b1f4a521039cb4a9a039c6b28192912f1f98afd5016fe3fa5d0fc9b249d40df",
     "fichier": "attal-dette/2026-10-24T1917Z.txt",
     "caracteres": 4872,
-    "wayback": null
+    "wayback": "https://web.archive.org/web/20261101055442/https://attalpresident.fr/programme/dette-de-letat"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "attal-dette-eco": {
   "versions": [
@@ -254,9 +254,9 @@
     "wayback": "https://web.archive.org/web/20261024192502/https://attalpresident.fr/programme/dette-ecologique"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "lr-propositions": {
   "versions": [
@@ -268,9 +268,9 @@
     "wayback": "https://web.archive.org/web/20261026055224/https://republicains.fr/nos-propositions/"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "eco-projet": {
   "versions": [
@@ -282,13 +282,13 @@
     "wayback": "https://web.archive.org/web/20261026055341/https://lesecologistes.fr/pages/6ImK65GKUnvibm33WGkjkj/projet-2027"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "pcf-programme": {
   "versions": [],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "erreur",
   "erreur": "HTTP Error 403: Forbidden"
  },
@@ -302,9 +302,9 @@
     "wayback": "https://web.archive.org/web/20261020110054/https://leprogrammepourlafrance.fr/"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "pp-projet": {
   "versions": [
@@ -316,9 +316,9 @@
     "wayback": "https://web.archive.org/web/20261024192720/https://place-publique.eu/pages/69jA2SKIG5udlNX7wI3dmc/le-projet"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "glucks-accueil": {
   "versions": [
@@ -328,11 +328,18 @@
     "fichier": "glucks-accueil/2026-10-24T1917Z.txt",
     "caracteres": 2549,
     "wayback": "https://web.archive.org/web/20261027055046/https://glucks2027.fr/"
+   },
+   {
+    "date": "2026-11-01T05:51:54+00:00",
+    "empreinte": "11c795fb722fc4ad9c06a9742c62017b248f22efc2b912b5e720f9365ba63454",
+    "fichier": "glucks-accueil/2026-11-01T0551Z.txt",
+    "caracteres": 2267,
+    "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "rn-accueil": {
   "versions": [
@@ -377,11 +384,18 @@
     "fichier": "rn-accueil/2026-10-31T0548Z.txt",
     "caracteres": 9872,
     "wayback": null
+   },
+   {
+    "date": "2026-11-01T05:51:54+00:00",
+    "empreinte": "21838bfc9c7d65ebf5562bc009b2c774d7b0a65ac20e085798807111878ce899",
+    "fichier": "rn-accueil/2026-11-01T0551Z.txt",
+    "caracteres": 9630,
+    "wayback": "https://web.archive.org/web/20261101055207/https://rassemblementnational.fr/"
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "cc-accueil": {
   "versions": [
@@ -407,13 +421,13 @@
     "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  },
  "infogouv-presidentielle": {
   "versions": [],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "erreur",
   "erreur": "HTTP Error 403: Forbidden"
  },
@@ -425,10 +439,17 @@
     "fichier": "sp-presidentielle/2026-10-25T0943Z.txt",
     "caracteres": 4749,
     "wayback": "https://web.archive.org/web/20261025094904/https://www.service-public.gouv.fr/particuliers/actualites/A15053?lang=fr"
+   },
+   {
+    "date": "2026-11-01T05:51:54+00:00",
+    "empreinte": "9c41a500e4fa1d0b1b0166f7488690e3d657c718eee507299176e780e7f8414e",
+    "fichier": "sp-presidentielle/2026-11-01T0551Z.txt",
+    "caracteres": 5037,
+    "wayback": null
    }
   ],
-  "derniere_tentative": "2026-10-31T05:48:14+00:00",
+  "derniere_tentative": "2026-11-01T05:51:54+00:00",
   "statut": "ok",
-  "derniere_reussite": "2026-10-31T05:48:14+00:00"
+  "derniere_reussite": "2026-11-01T05:51:54+00:00"
  }
 }
