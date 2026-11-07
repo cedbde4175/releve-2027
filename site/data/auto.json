@@ -1,5 +1,5 @@
 {
- "maj": "2026-11-06T06:06:38+00:00",
+ "maj": "2026-11-07T05:54:50+00:00",
  "passages": [
   {
    "id": "lfi-programme-2026-10-29T0552Z-0",
@@ -450,6 +450,21 @@
    "archive_apres": "https://github.com/cedbde4175/releve-2027/blob/main/archive/attal-programme/2026-10-31T0548Z.txt",
    "wayback_avant": "https://web.archive.org/web/20261025054229/https://attalpresident.fr/programme",
    "wayback_apres": null
+  },
+  {
+   "id": "lfi-programme-2026-11-07T0554Z-0",
+   "date": "2026-11-07T05:54:50+00:00",
+   "sens": "retrait",
+   "page": "lfi-programme",
+   "candidat": "melenchon",
+   "url": "https://melenchon2027.fr/programme/decouvrir/",
+   "libelle": "Mélenchon 2027, « Découvrir le programme »",
+   "citation": "Retrouvez la 5e édition de L’Avenir en Commun, notre livre-programme qui rassemble toutes mesures concrètes portées par Jean-Luc Mélenchon et la France insoumise pour répondre à l’urgence écologique et sociale.",
+   "tronquee": false,
+   "archive_avant": "https://github.com/cedbde4175/releve-2027/blob/main/archive/lfi-programme/2026-11-06T0606Z.txt",
+   "archive_apres": "https://github.com/cedbde4175/releve-2027/blob/main/archive/lfi-programme/2026-11-07T0554Z.txt",
+   "wayback_avant": "https://web.archive.org/web/20261106060656/https://melenchon2027.fr/programme/decouvrir/",
+   "wayback_apres": "https://web.archive.org/web/20261107055503/https://melenchon2027.fr/programme/decouvrir/"
   }
  ]
 }
